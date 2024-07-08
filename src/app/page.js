@@ -8,15 +8,23 @@ export default function Home() {
 		<>
 		<div class="flex flex-row size-full box-border space-x-7">
 				<div class="flex p-5 grow-0 justify-center bg-violet-300 text-2xl font-bold rounded-2xl 
-										min-w-fit min-h-full border-4 border-solid" 
+					min-w-fit min-h-full" 
 				>
 					<Navbar />
 				</div>
 
-				<div class="flex flex-nowrap p-5 grow justify-center bg-violet-400 text-1xl rounded-2xl 
-										min-w-25 min-h-full border-4 border-solid "
+				<div class="flex flex-nowrap flex-col p-5 grow justify-center bg-violet-400 text-1xl rounded-2xl 
+					min-w-25 min-h-full space-y-10"
 				>
+					<div className="flex p-3 grow-0 justify-center bg-violet-700 rounded-2xl text-1xl 
+						min-h-2xl "
+					>
 
+					</div>
+
+					<div className="flex ">
+
+					</div>
 				</div>
 			</div>
 		</>
