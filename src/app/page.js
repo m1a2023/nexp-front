@@ -1,30 +1,29 @@
 'use client';
 import React from 'react';
-import Router from 'next/router';
-import Link from 'next/link';
+import { Navbar } from '/pages/navbar';
 
 export default function Home() {
 	return (
 		<>
-		<div class="flex flex-row size-full box-border space-x-7">
-				<div class="flex p-5 grow-0 justify-center bg-violet-300 text-2xl font-bold rounded-2xl 
-					min-w-fit min-h-full" 
+			<div className="flex flex-row size-full box-border space-x-5 ">
+				<div className="flex p-5 grow justify-center text-2xl font-bold
+					min-w-fit min-h-full max-w-44 text-white bg-raisin-Black" 
 				>
 					<Navbar />
 				</div>
-
-				<div class="flex flex-nowrap flex-col p-5 grow justify-center bg-violet-400 text-1xl rounded-2xl 
-					min-w-25 min-h-full space-y-10"
+					
+				<div className="flex flex-nowrap p-5 flex-col grow justify-center bg-violet-400 text-1xl rounded-2xl 
+					min-h-full space-y-10 max-w-screen-xl"
 				>
-					<div className="flex p-3 grow-0 justify-center bg-violet-700 rounded-2xl text-1xl 
-						min-h-2xl "
-					>
+						<div className="flex flex-nowrap justify-center grow-0 p-5 bg-indigo-400 text-1xl rounded-2xl
+							min-h-7 max-h-1/8 border-4 border-solid border-violet-100 text-2xl font-bold"
+						>
+							Text	
+						</div>	
 
-					</div>
-
-					<div className="flex ">
-
-					</div>
+						<div className="flex flex-nowrap justify-start flex-col grow bg-transparent">
+							Text
+						</div>
 				</div>
 			</div>
 		</>
@@ -32,29 +31,6 @@ export default function Home() {
 };
 
 
-function Navbar() {
 
-	return (
-		<>
-			<ul>
-				<li>
-					<Link href="/">Home</Link>
-				</li>
-				<li>
-					<Link href="/route1">Route1</Link>
-				</li>
-				<li>
-					<Link href="/route2">Route2</Link>
-				</li>
-				<li>
-					<Link href="/route3">Route3</Link>
-				</li>
-				<li>
-					<Link href="/about">About</Link>
-				</li>
-			</ul>
-		</>
-	);
-};
 
 
