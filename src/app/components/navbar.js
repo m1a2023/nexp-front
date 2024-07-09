@@ -1,6 +1,8 @@
 import Link from "next/link";
 
+//TODO: make menu bigger
 export function Navbar() {
+  //TODO: change routes
   return (
     <>
       <ul className="flex flex-col justify-center space-y-5">

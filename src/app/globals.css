@@ -26,13 +26,8 @@ body,
 body {
   display: flex;
   box-sizing: border-box;
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: white;
+  background: #e5e7eb;
 }
 
 @layer utilities {
