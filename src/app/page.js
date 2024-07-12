@@ -2,8 +2,7 @@
 import React from "react";
 import { Navbar } from "./components/navbar";
 import { Logo } from "./components/logo";
-import { TemplateCard } from "./components/main";
-import styles from "./page.module.css";
+import { TemplateMoneyCard } from "./components/main";
 
 export default function Home() {
   //FIXME: change font and font size
@@ -22,39 +21,43 @@ export default function Home() {
         gap-6"
       >
         <div className={"h-1/3 w-full flex flex-row space-x-6 py-3"}>
-          <TemplateCard
+          <TemplateMoneyCard
             cardTitle={"Current balance"}
-            mainInformation={"200$"}
+            mainInformation={"199.3$"}
+            currency={"USD"}
             color={"bg-medium-state-blue"}
-          ></TemplateCard>
+          ></TemplateMoneyCard>
 
-          <TemplateCard
+          <TemplateMoneyCard
             cardTitle={"Income"}
-            mainInformation={"Some information"}
-            color={"bg-violet-700"}
-          ></TemplateCard>
+            mainInformation={"1,300$"}
+            currency={"USD"}
+            color={"bg-violet-500"}
+          ></TemplateMoneyCard>
 
-          <TemplateCard
-            color={"bg-ash-gray"}
+          <TemplateMoneyCard
+            color={"bg-gray-500"}
             cardTitle={"Expenses"}
-            mainInformation={"None"}
-          ></TemplateCard>
+            currency={"USD"}
+            mainInformation={"1,100.7$"}
+          ></TemplateMoneyCard>
 
-          <TemplateCard
+          <TemplateMoneyCard
             color={"bg-raisin-black"}
             cardTitle={"Money box"}
-            mainInformation={"Empty"}
-          ></TemplateCard>
+            mainInformation={"19,351"}
+            currency={"RUB"}
+          ></TemplateMoneyCard>
         </div>
         <div className={"h-2/3 w-full flex flex-row space-x-6"}>
           <div className="w-1/2 pt-4">
             <div className="w-full h-full bg-ash-gray justify-start rounded-3xl shadow-2xl">
-              <p >Expenses graphic</p>
+              <p>Expenses graphic</p>
             </div>
           </div>
           <div className="w-1/2 py-4 space-y-4">
-            <div className="w-full h-1/2 bg-[#123590] justify-start rounded-3xl shadow-2xl"></div>
-            <div className="w-full h-1/2 bg-[#951256] justify-start rounded-3xl shadow-2xl"></div>
+            <div className="w-full h-1/2 bg-violet-500 justify-start rounded-3xl shadow-2xl"></div>
+            <div className="w-full h-1/2 bg-emerald-500 justify-start rounded-3xl shadow-2xl"></div>
           </div>
         </div>
       </div>

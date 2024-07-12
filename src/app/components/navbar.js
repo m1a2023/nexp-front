@@ -5,7 +5,7 @@ export function Navbar() {
   //TODO: change routes
   return (
     <>
-      <ul className="flex flex-col justify-center space-y-5">
+      <ul className="flex flex-col justify-center space-y-5 select-none">
         {/* <li className="flex justify-center">
           <Link href="/">Home</Link>
         </li> */}
