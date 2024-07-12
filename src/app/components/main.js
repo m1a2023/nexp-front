@@ -15,7 +15,7 @@ export function TemplateCard({ cardTitle, mainInformation, color }) {
 
   return (
     <div
-      className={`flex flex-col p-3 grow justify-start rounded-3xl max-h-40 min-h-20 max-w-72 min-w-36 ${color} shadow-2xl`}
+      className={`flex flex-col w-1/4 p-3 grow justify-start rounded-3xl ${color} shadow-2xl`}
     >
       <SetCardTitle cardTitle={`${cardTitle}`} />
 

@@ -3,46 +3,60 @@ import React from "react";
 import { Navbar } from "./components/navbar";
 import { Logo } from "./components/logo";
 import { TemplateCard } from "./components/main";
+import styles from "./page.module.css";
 
 export default function Home() {
   //FIXME: change font and font size
   return (
-    <div className="flex flex-row h-full w-full box-border space-x-7 bg-gray-200">
+    <div className="flex flex-row w-full box-border bg-gray-200">
       <div
         className="flex p-5 grow-0 flex-col justify-start text-2xl font-bold space-y-10
-				w-44 min-h-full bg-black"
+				w-[18%] min-h-full bg-black"
       >
         <Logo />
         <Navbar />
       </div>
 
       <div
-        className="flex flex-row p-5 flex-wrap grow justify-start text-1xl min-w-25 min-h-full 
+        className="flex flex-col p-6 grow justify-start text-1xl h-full max-h-[100vh]
         gap-6"
       >
-        <TemplateCard
-          cardTitle={"Demo"}
-          mainInformation={"Some information"}
-          color={"bg-violet-700"}
-        ></TemplateCard>
+        <div className={"h-1/3 w-full flex flex-row space-x-6 py-3"}>
+          <TemplateCard
+            cardTitle={"Current balance"}
+            mainInformation={"200$"}
+            color={"bg-medium-state-blue"}
+          ></TemplateCard>
 
-        <TemplateCard
-          color={"bg-ash-gray"}
-          cardTitle={"NewCard"}
-          mainInformation={"None"}
-        ></TemplateCard>
+          <TemplateCard
+            cardTitle={"Income"}
+            mainInformation={"Some information"}
+            color={"bg-violet-700"}
+          ></TemplateCard>
 
-        <TemplateCard
-          cardTitle={"Current balance"}
-          mainInformation={"200$"}
-          color={"bg-medium-state-blue"}
-        ></TemplateCard>
+          <TemplateCard
+            color={"bg-ash-gray"}
+            cardTitle={"Expenses"}
+            mainInformation={"None"}
+          ></TemplateCard>
 
-        <TemplateCard
-          color={"bg-raisin-black"}
-          cardTitle={"NewCard2"}
-          mainInformation={"Empty"}
-        ></TemplateCard>
+          <TemplateCard
+            color={"bg-raisin-black"}
+            cardTitle={"Money box"}
+            mainInformation={"Empty"}
+          ></TemplateCard>
+        </div>
+        <div className={"h-2/3 w-full flex flex-row space-x-6"}>
+          <div className="w-1/2 pt-4">
+            <div className="w-full h-full bg-ash-gray justify-start rounded-3xl shadow-2xl">
+              <p >Expenses graphic</p>
+            </div>
+          </div>
+          <div className="w-1/2 py-4 space-y-4">
+            <div className="w-full h-1/2 bg-[#123590] justify-start rounded-3xl shadow-2xl"></div>
+            <div className="w-full h-1/2 bg-[#951256] justify-start rounded-3xl shadow-2xl"></div>
+          </div>
+        </div>
       </div>
     </div>
   );

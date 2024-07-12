@@ -6,9 +6,9 @@ export function Navbar() {
   return (
     <>
       <ul className="flex flex-col justify-center space-y-5">
-        <li className="flex justify-center">
+        {/* <li className="flex justify-center">
           <Link href="/">Home</Link>
-        </li>
+        </li> */}
         <li className="flex justify-center">
           <Link href="/route1">Route1</Link>
         </li>
@@ -20,6 +20,9 @@ export function Navbar() {
         </li>
         <li className="flex justify-center">
           <Link href="/about">About</Link>
+        </li>
+        <li className="flex justify-center">
+          <Link href="/about">Exit</Link>
         </li>
       </ul>
     </>
