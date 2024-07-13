@@ -5,7 +5,6 @@ import { Logo } from "./components/logo";
 import { TemplateMoneyCard, TemplateGraphic } from "./components/main";
 
 export default function Home() {
-  //FIXME: change font and font size
   return (
     <div className="flex flex-row w-full box-border bg-gray-200">
       <div
