@@ -24,7 +24,7 @@ export function TemplateMoneyCard({
 
   return (
     <div
-      className={`flex flex-col w-1/4 p-3 grow-0 justify-start rounded-3xl ${color} shadow-2xl select-none`}
+      className={`flex flex-col snap-start w-1/4 p-3 grow-0 justify-start rounded-3xl ${color} shadow-2xl select-none`}
     >
       <SetMoneyCardTitle cardTitle={`${cardTitle}`} />
 

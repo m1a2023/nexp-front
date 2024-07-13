@@ -1,30 +1,26 @@
 import Link from "next/link";
 
-//TODO: make menu bigger
 export function Navbar() {
   //TODO: change routes
   return (
     <>
-      <ul className="flex flex-col justify-center space-y-5 select-none">
-        {/* <li className="flex justify-center">
+      <div className="flex flex-col justify-center text-2xl gap-4 select-none">
+        <li className="flex justify-center p-3 rounded-3xl border-transparent border-4 transition-all duration-300 delay-100 hover:border-4 hover:border-gray-50 select-none">
           <Link href="/">Home</Link>
-        </li> */}
-        <li className="flex justify-center">
-          <Link href="/route1">Route1</Link>
         </li>
-        <li className="flex justify-center">
-          <Link href="/route2">Route2</Link>
+        <li className="flex justify-center p-3 rounded-3xl border-transparent border-4 transition-all duration-300 delay-100 hover:border-4 hover:border-gray-50 select-none">
+          <Link href="/route1">Profile</Link>
         </li>
-        <li className="flex justify-center">
-          <Link href="/route3">Route3</Link>
+        <li className="flex justify-center p-3 rounded-3xl border-transparent border-4 transition-all duration-300 delay-100 hover:border-4 hover:border-gray-50 select-none">
+          <Link href="/route2">Table</Link>
         </li>
-        <li className="flex justify-center">
+        <li className="flex justify-center p-3 rounded-3xl border-transparent border-4 transition-all duration-300 delay-100 hover:border-4 hover:border-gray-50 select-none">
+          <Link href="/route3">Settings</Link>
+        </li>
+        <li className="flex justify-center p-3 rounded-3xl border-transparent border-4 transition-all duration-300 delay-100 hover:border-4 hover:border-gray-50 select-none">
           <Link href="/about">About</Link>
         </li>
-        <li className="flex justify-center">
-          <Link href="/about">Exit</Link>
-        </li>
-      </ul>
+      </div>
     </>
   );
 }
