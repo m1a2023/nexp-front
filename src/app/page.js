@@ -2,7 +2,7 @@
 import React from "react";
 import { Navbar } from "./components/navbar";
 import { Logo } from "./components/logo";
-import { TemplateMoneyCard } from "./components/main";
+import { TemplateMoneyCard, TemplateGraphic } from "./components/main";
 
 export default function Home() {
   //FIXME: change font and font size
@@ -50,11 +50,7 @@ export default function Home() {
           ></TemplateMoneyCard>
         </div>
         <div className={"h-2/3 w-full flex flex-row space-x-6"}>
-          <div className="w-1/2 pt-4">
-            <div className="w-full h-full bg-ash-gray justify-start rounded-3xl shadow-2xl">
-              <p>Expenses graphic</p>
-            </div>
-          </div>
+          <TemplateGraphic></TemplateGraphic>
           <div className="w-1/2 py-4 space-y-4">
             <div className="w-full h-1/2 bg-violet-500 justify-start rounded-3xl shadow-2xl"></div>
             <div className="w-full h-1/2 bg-emerald-500 justify-start rounded-3xl shadow-2xl"></div>
