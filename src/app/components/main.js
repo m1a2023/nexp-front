@@ -3,6 +3,7 @@ export function TemplateMoneyCard({
   mainInformation,
   currency,
   color,
+  width,
 }) {
   function SetMoneyCardTitle({ cardTitle }) {
     //TODO: write class
@@ -24,7 +25,7 @@ export function TemplateMoneyCard({
 
   return (
     <div
-      className={`flex flex-col snap-start w-1/4 p-3 grow-0 justify-start rounded-3xl ${color} shadow-2xl select-none`}
+      className={`flex flex-col snap-start ${width} p-3 grow-0 justify-start rounded-3xl ${color} shadow-2xl select-none`}
     >
       <SetMoneyCardTitle cardTitle={`${cardTitle}`} />
 
@@ -54,7 +55,7 @@ export function TemplateGraphic({ graphicTitle, mainInformation, color }) {
 
   return (
     <div
-      className={`flex flex-col flex-1 w-1/2 p-4 grow ${color} rounded-3xl shadow-2xl select-none`}
+      className={`flex flex-col w-3/4 p-4 ${color} rounded-3xl shadow-2xl select-none`}
     >
       <SetGraphicTitle graphicTitle={`${graphicTitle}`} />
 
