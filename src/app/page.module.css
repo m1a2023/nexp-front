@@ -5,19 +5,17 @@
 .addInfoBtn {
     width: 60px;
     height: 60px;
-    border-radius: 50px;
-    margin: 18px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 38px;
-}
-
-.addIncomeBtn {
-    background-color: rgb(33, 201, 33);
+    /* text-align: center; */
+    font-size: 48px;
+    font-weight: 500;
+    box-shadow: 0 25px 50px -12px rgb(0, 0, 0);
+    cursor: pointer;
 }
 
 .addExpensesBtn {
     background-color: rgb(218, 41, 41);
-    display: none;
 }
