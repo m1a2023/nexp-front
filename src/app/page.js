@@ -62,10 +62,7 @@ export default function Home() {
             mainInformation={"Graphic"}
             color={"bg-emerald-500"}
           ></TemplateGraphic>
-          {/* <div className="w-1/2 py-4 space-y-4">
-            <div className="w-full h-1/2 bg-violet-500 justify-start rounded-3xl shadow-2xl"></div>
-            <div className="w-full h-1/2 bg-emerald-500 justify-start rounded-3xl shadow-2xl"></div>
-          </div> */}
+          {/*DEMO BLOCKS! DO NOT DELETE!*/}
           <div className="flex flex-col w-1/4 gap-6">
             <div className="flex w-1/8 h-full p-4 font-bold text-neutral-800 bg-gray-200 text-lg rounded-3xl shadow-2xl select-none">
               Demo block
@@ -78,10 +75,10 @@ export default function Home() {
       </div>
 
       <div className="absolute bottom-0 right-0 flex flex-row">
-        <div className={styles.addInfoBtn + ' ' + styles.addExpensesBtn}>
+        <div className={styles.addInfoBtn + " " + styles.addExpensesBtn}>
           <span>-</span>
         </div>
-        <div className={styles.addInfoBtn + ' ' + styles.addIncomeBtn}>
+        <div className={styles.addInfoBtn + " " + styles.addIncomeBtn}>
           <span>+</span>
         </div>
       </div>
