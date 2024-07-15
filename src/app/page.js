@@ -27,7 +27,7 @@ export default function Home() {
         <div className="h-1/3 w-full flex flex-row py-3 gap-6 ">
           <div className="w-3/4 h-full flex felx-row gap-6">
             <TemplateMoneyCard
-              cardTitle={"Current balance"}
+              cardTitle={"Balance"}
               mainInformation={"199.3"}
               currency={"USD"}
               color={"bg-medium-state-blue"}
