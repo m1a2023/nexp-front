@@ -4,6 +4,7 @@ export function TemplateMoneyCard({
   currency,
   color,
   width,
+  distance,
 }) {
   function SetMoneyCardTitle({ cardTitle }) {
     //TODO: write class
@@ -25,7 +26,7 @@ export function TemplateMoneyCard({
 
   return (
     <div
-      className={`flex flex-col snap-start ${width} p-3 grow-0 justify-start rounded-3xl ${color} shadow-2xl select-none`}
+      className={`flex flex-col snap-start ${width} ${distance} p-3 grow-0 justify-start rounded-3xl ${color} shadow-2xl select-none`}
     >
       <SetMoneyCardTitle cardTitle={`${cardTitle}`} />
 
@@ -60,6 +61,16 @@ export function TemplateGraphic({ graphicTitle, mainInformation, color }) {
       <SetGraphicTitle graphicTitle={`${graphicTitle}`} />
 
       <SetGraphicMainInformation mainInformation={`${mainInformation}`} />
+    </div>
+  );
+}
+
+export function TemplateAbsoluteButton({ styles }) {
+  return (
+    <div className="absolute bottom-5 right-5 flex flex-row gap-4">
+      <div className={styles.addInfoBtn + " " + styles.addExpensesBtn}>
+        <span>+</span>
+      </div>
     </div>
   );
 }
