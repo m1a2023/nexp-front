@@ -1,9 +1,8 @@
 # Development list
 
-1. Change "add/del" absolute button (svg/png "+")
-2. Think about difference distance between TemplateMoneyCard
-3. Think about currency and symbol
-4. Dark theme
-5. Make a Profile page
-6. Add functions to "add/del" absolute button
-7. Add graph
+1. Think about difference distance between TemplateMoneyCard
+2. Think about currency and symbol
+3. Dark theme
+4. Make a Profile page
+5. Add functions to "add/del" absolute button
+6. Add graph
