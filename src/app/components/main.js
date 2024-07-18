@@ -1,5 +1,13 @@
 import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
 
+export const Colors = Object.freeze({
+  RoseBright: "#f8f0fb",
+  AshGray: "#cad5ca",
+  ElectricIndigo: "#6320ee",
+  MediumStateBlue: "#8075ff",
+  RaisinBlack: "#211a1d",
+});
+
 export function TemplateMoneyCard({
   cardTitle,
   mainInformation,
@@ -8,6 +16,25 @@ export function TemplateMoneyCard({
   width,
   distance,
 }) {
+  const textColor = color === Colors.RoseBright ? "#282828" : "#ffffff";
+
+  const MoneyCardTitle = ({ cardTitle }) => {
+    return (
+      <div className="flex w-full h-full justify-start font-bold text-lg">
+        <div className="flex">{cardTitle}</div>
+      </div>
+    );
+  };
+
+  const MoneyCordMainInformation = ({ mainInformation }) => {
+    return (
+      <div className="flex grow text-xl justify-start w-full ">
+        <div className="truncate text-4xl font-bold">{mainInformation}</div>
+      </div>
+    );
+  };
+
+  /*
   function SetMoneyCardTitle({ cardTitle }) {
     //TODO: write class
     return (
@@ -25,14 +52,16 @@ export function TemplateMoneyCard({
       </div>
     );
   }
+  */
 
   return (
     <div
-      className={`flex flex-col snap-start ${width} ${distance} p-3 grow-0 justify-start rounded-3xl ${color} shadow-2xl select-none`}
+      className={`flex flex-col snap-start ${width} ${distance} pl-4 pr-3 pb-2 pt-3 grow-0 justify-start rounded-3xl shadow-2xl select-none`}
+      style={{ backgroundColor: color, color: textColor }}
     >
-      <SetMoneyCardTitle cardTitle={`${cardTitle}`} />
+      <MoneyCardTitle cardTitle={`${cardTitle}`} />
 
-      <SetMoneyCardMainInformation mainInformation={`${mainInformation}`} />
+      <MoneyCordMainInformation mainInformation={`${mainInformation}`} />
 
       <div className="flex flex-row w-full justify-end">
         <div className="flex justify-end text-2xl opacity-45 font-bold">
@@ -58,7 +87,7 @@ export function TemplateGraphic({ graphicTitle, mainInformation, color }) {
 
   return (
     <div
-      className={`flex flex-col w-3/4 p-4 ${color} rounded-3xl shadow-2xl select-none`}
+      className={`flex flex-col w-3/4 px-6 py-4 ${color} text-black rounded-3xl shadow-2xl select-none`}
     >
       <SetGraphicTitle graphicTitle={`${graphicTitle}`} />
 
@@ -73,7 +102,7 @@ export function TemplateAbsoluteButton({ styles }) {
       <div
         className={`backdrop-blur-lg backdrop-brightness-95 w-full h-full ${display} justify-center items-center`}
       >
-        <div className="w-[40%] h-[60%] bg-gray-200 rounded-3xl flex flex-col items-center text-black p-4">
+        <div className="w-[35%] h-[60%] bg-gray-200 rounded-3xl flex flex-col items-center text-black p-4">
           <h1>Add Expenses</h1>
           <button
             className="p-4 bg-[red] text-white rounded-3xl"

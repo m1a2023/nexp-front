@@ -3,19 +3,19 @@
 } */
 
 .addInfoBtn {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* text-align: center; */
-    font-size: 48px;
-    font-weight: 500;
-    box-shadow: 0 25px 50px -12px rgb(0, 0, 0);
-    cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
+  font-size: 48px;
+  font-weight: 500;
+  box-shadow: 0 25px 50px -12px rgb(0, 0, 0);
+  cursor: pointer;
 }
 
 .addExpensesBtn {
-    background-color: rgb(218, 41, 41);
+  background-color: rgb(218, 41, 41);
 }

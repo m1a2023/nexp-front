@@ -12,6 +12,7 @@ module.exports = {
         "electric-indigo": "#6320ee",
         "medium-state-blue": "#8075ff",
         "ash-gray": "#cad5ca",
+        "rose-bright": "#f8f0fb",
       },
     },
   },
