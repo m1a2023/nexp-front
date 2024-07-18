@@ -2,13 +2,11 @@
 import React from "react";
 import { Navbar } from "./components/navbar";
 import { Logo } from "./components/logo";
-import {
-  TemplateMoneyCard,
-  TemplateGraphic,
-  TemplateAbsoluteButton,
-  Colors,
-} from "./components/main";
+import { colors } from "./components/header";
 import styles from "./page.module.css";
+import { TemplateMoneyCard } from "./components/moneyCard";
+import { TemplateGraphic } from "./components/graphic";
+import { TemplateAbsoluteButton } from "./components/absoluteButton";
 
 export default function Home() {
   return (
@@ -31,7 +29,7 @@ export default function Home() {
               cardTitle={"Balance"}
               mainInformation={"199.3"}
               currency={"USD"}
-              color={Colors.ElectricIndigo}
+              color={colors.ElectricIndigo}
               width={"w-1/3"}
             ></TemplateMoneyCard>
 
@@ -39,12 +37,12 @@ export default function Home() {
               cardTitle={"Income"}
               mainInformation={"1,300"}
               currency={"USD"}
-              color={Colors.RaisinBlack}
+              color={colors.RaisinBlack}
               width={"w-1/3"}
             ></TemplateMoneyCard>
 
             <TemplateMoneyCard
-              color={Colors.RoseBright}
+              color={colors.RoseBright}
               cardTitle={"Expenses"}
               currency={"USD"}
               mainInformation={"1,100.7"}
@@ -53,7 +51,7 @@ export default function Home() {
           </div>
 
           <TemplateMoneyCard
-            color={Colors.AshGray}
+            color={colors.AshGray}
             cardTitle={"Money box"}
             mainInformation={"19,351"}
             currency={"RUB"}
