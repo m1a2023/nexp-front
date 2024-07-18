@@ -71,7 +71,6 @@ export function TemplateAbsoluteButton({ styles }) {
   function AddExpensesBlock({ display }) {
     return (
       <div
-        id="addExpensesBlock"
         className={`backdrop-blur-lg backdrop-brightness-95 w-full h-full ${display} justify-center items-center`}
       >
         <div className="w-[40%] h-[60%] bg-gray-200 rounded-3xl flex flex-col items-center text-black p-4">
@@ -92,8 +91,13 @@ export function TemplateAbsoluteButton({ styles }) {
   }
 
   return (
-    <div className="absolute w-full h-full flex flex-row">
-      <AddExpensesBlock display={"hidden"} />
+    <>
+      <div
+        id="addExpensesBlock"
+        className="absolute w-full h-full flex flex-row hidden"
+      >
+        <AddExpensesBlock display={"flex"} />
+      </div>
       <div
         id="addExpensesBtn"
         className={
@@ -126,6 +130,6 @@ export function TemplateAbsoluteButton({ styles }) {
           </svg>
         </span>
       </div>
-    </div>
+    </>
   );
 }
