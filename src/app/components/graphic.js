@@ -1,8 +1,9 @@
 import Chart from "chart.js/auto";
 import { useEffect } from "react";
+import { Doughnut } from "react-chartjs-2";
 
 export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
-  const GraphicTitle = ({ graphicTitle }) => {
+  const Title = ({ graphicTitle }) => {
     return (
       <div className="flex w-full justify-start font-bold text-lg">
         {graphicTitle}
@@ -10,7 +11,7 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
     );
   };
 
-  const GraphicMainInformation = ({ mainInformation }) => {
+  const MainInformation = ({ mainInformation }) => {
     return <div>{mainInformation}</div>;
   };
 
@@ -22,7 +23,7 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
       data: {
         labels: [
           "Supermarkets",
-          "Drug Store",
+          "Pharmacies",
           "Online stores",
           "Online services",
         ],
@@ -42,12 +43,12 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
       },
     });
 
-    // chart.destroy();
+    //chart.destroy();
   });
 
   const Graphic = () => {
     return (
-      <div className="chart-container w-[400px] h-[400px]">
+      <div className="chart-container w-[85%] h-[85%]">
         <canvas id="myChart"></canvas>
       </div>
     );
@@ -56,9 +57,9 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
     <div
       className={`flex flex-col w-3/4 px-6 py-4 ${color} text-black rounded-3xl shadow-2xl select-none`}
     >
-      <GraphicTitle graphicTitle={`${graphicTitle}`} />
+      <Title graphicTitle={`${graphicTitle}`} />
 
-      <GraphicMainInformation mainInformation={`${mainInformation}`} />
+      <MainInformation mainInformation={`${mainInformation}`} />
 
       <Graphic />
     </div>

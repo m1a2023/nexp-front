@@ -62,7 +62,7 @@ export default function Home() {
         <div className={"h-2/3 w-full flex flex-row gap-6"}>
           <TemplateGraphic
             graphicTitle={"Expenses"}
-            mainInformation={"Graphic"}
+            mainInformation={""}
             color={"bg-gray-100"}
           ></TemplateGraphic>
           {/*DEMO BLOCKS! DO NOT DELETE!*/}
