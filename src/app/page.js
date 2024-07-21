@@ -10,15 +10,7 @@ import { TemplateAbsoluteButton } from "./components/absoluteButton";
 
 export default function Home() {
   return (
-    <div className="flex flex-row w-full box-border bg-gray-200">
-      <div
-        className="flex p-5 grow-0 flex-col justify-start space-y-10
-				w-[18%] min-h-full bg-black"
-      >
-        <Logo />
-        <Sidebar />
-      </div>
-
+    <div className="flex flex-row w-full h-full box-border bg-gray-200">
       <div
         className="flex flex-col p-6 grow justify-start text-1xl h-full max-h-[100vh]
         gap-6"

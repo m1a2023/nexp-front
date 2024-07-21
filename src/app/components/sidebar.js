@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { navbarColors } from "./header";
-
+import { Logo } from "./logo";
 export const Sidebar = () => {
   //TODO: change routes
 
@@ -16,7 +16,8 @@ export const Sidebar = () => {
   */
 
   return (
-    <>
+    <div className="flex p-5 grow-0 flex-col h-full w-full justify-start space-y-10 bg-black">
+      <Logo />
       <div className="flex flex-col justify-center text-2xl gap-4 select-none">
         <Link href="/">
           <li className="flex justify-center p-3 rounded-3xl transition-all duration-300 hover:bg-ash-gray hover:text-black select-none">
@@ -48,6 +49,6 @@ export const Sidebar = () => {
           </li>
         </Link>
       </div>
-    </>
+    </div>
   );
 };
