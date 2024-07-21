@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { navbarColors } from "./header";
 
-export const Navbar = () => {
+export const Sidebar = () => {
   //TODO: change routes
 
   //TODO: make a rainbowed navbar's Links

@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import { Navbar } from "./components/navbar";
+import { Sidebar } from "./components/sidebar";
 import { Logo } from "./components/logo";
 import { colors } from "./components/header";
-import styles from "./page.module.css";
+import styles from "./assets/page.module.css";
 import { TemplateMoneyCard } from "./components/moneyCard";
 import { TemplateGraphic } from "./components/graphic";
 import { TemplateAbsoluteButton } from "./components/absoluteButton";
@@ -16,7 +16,7 @@ export default function Home() {
 				w-[18%] min-h-full bg-black"
       >
         <Logo />
-        <Navbar />
+        <Sidebar />
       </div>
 
       <div
