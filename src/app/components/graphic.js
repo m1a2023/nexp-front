@@ -1,7 +1,6 @@
 import Chart from "chart.js/auto";
 import { useEffect } from "react";
 import { Doughnut, Pie } from "react-chartjs-2";
-import Highcharts from "highcharts";
 
 export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
   const Title = ({ graphicTitle }) => {
@@ -17,104 +16,57 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
   };
 
   const GraphicSection = () => {
-    // useEffect(() => {
-    //   Highcharts.chart("doughnutChart", {
-    //     chart: {
-    //       plotBackgroundColor: null,
-    //       plotBorderWidth: null,
-    //       plotShadow: false,
-    //       type: "pie",
-    //     },
-    //     title: {
-    //       text: "",
-    //       align: "left",
-    //     },
-    //     // tooltip: {
-    //     //   pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
-    //     // },
-    //     accessibility: {
-    //       point: {
-    //         valueSuffix: "%",
-    //       },
-    //     },
-    //     plotOptions: {
-    //       pie: {
-    //         allowPointSelect: true,
-    //         cursor: "pointer",
-    //         dataLabels: {
-    //           enabled: false,
-    //         },
-    //         showInLegend: true,
-    //       },
-    //     },
-    //     series: [
-    //       {
-    //         name: "Brands",
-    //         colorByPoint: true,
-    //         data: [
-    //           {
-    //             name: "Chrome",
-    //             y: 74.77,
-    //             // sliced: true,
-    //             // selected: true,
-    //           },
-    //           {
-    //             name: "Edge",
-    //             y: 12.82,
-    //           },
-    //           {
-    //             name: "Firefox",
-    //             y: 4.63,
-    //           },
-    //           {
-    //             name: "Safari",
-    //             y: 2.44,
-    //           },
-    //           {
-    //             name: "Internet Explorer",
-    //             y: 2.02,
-    //           },
-    //           {
-    //             name: "Other",
-    //             y: 3.28,
-    //           },
-    //         ],
-    //       },
-    //     ],
-    //   });
-    // });
     return (
-      <div className="w-[50%] h-[50%]">
+      <div className="w-[65%] h-full">
         <Pie
           data={{
-            labels: ["Red", "Blue", "Yellow"],
+            labels: [
+              "Supermarkets",
+              "Online shops",
+              "Online services",
+              "Drug`s stores",
+            ],
             datasets: [
               {
                 label: "Percent",
-                data: [300, 50, 100],
+                data: [32, 40, 23, 5],
                 backgroundColor: [
                   "rgb(255, 99, 132)",
                   "rgb(54, 162, 235)",
                   "rgb(255, 205, 86)",
+                  "rgb(98, 123, 60)",
                 ],
                 hoverOffset: 4,
               },
             ],
           }}
-          options={{}}
+          options={{
+            responsive: true,
+            plugins: {
+              legend: {
+                position: "left",
+                display: false,
+              },
+
+              options: { scales: { scaleLabel: { fontSize: 24 } } },
+            },
+          }}
         />
       </div>
-      // <div id="doughnutChart" className=""></div>
     );
   };
 
   return (
     <div
-      className={`flex flex-col w-3/4 px-6 py-4 ${color} text-black rounded-3xl shadow-2xl select-none`}
+      className={`flex flex-row w-3/4 px-6 py-4 ${color} text-black rounded-3xl shadow-2xl select-none`}
     >
-      <Title graphicTitle={`${graphicTitle}`} />
-      <MainInformation mainInformation={`${mainInformation}`} />
-      <GraphicSection />
+      <div className={"flex flex-col w-1/4 h-full"}>
+        <Title graphicTitle={`${graphicTitle}`} />
+        <MainInformation mainInformation={`${mainInformation}`} />
+      </div>
+      <div className={"w-3/4 h-full flex justify-center"}>
+        <GraphicSection />
+      </div>
     </div>
   );
 };
