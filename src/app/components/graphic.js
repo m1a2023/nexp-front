@@ -32,7 +32,7 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
         </div>
         <div className="inline-flex flex-row items-baseline">
           <div className="w-[20px] h-[20px] rounded-[50%] bg-[#627b3c] mr-[6px]"></div>
-          <span className="text-[24px]">Drug`s stores</span>
+          <span className="text-[24px]">Pharmacies</span>
         </div>
       </div>
     );
@@ -47,7 +47,7 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
               "Supermarkets",
               "Online shops",
               "Online services",
-              "Drug`s stores",
+              "Pharmacies",
             ],
             datasets: [
               {
