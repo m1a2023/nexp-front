@@ -1,7 +1,6 @@
 import Chart from "chart.js/auto";
 import { useEffect } from "react";
 import { Doughnut, Pie } from "react-chartjs-2";
-import Highcharts from "highcharts";
 
 export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
   const Title = ({ graphicTitle }) => {
