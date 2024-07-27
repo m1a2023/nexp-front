@@ -12,108 +12,85 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
   };
 
   const MainInformation = ({ mainInformation }) => {
-    return <div>{mainInformation}</div>;
+    return <div>By category</div>;
+  };
+
+  const GraphicInformation = () => {
+    return (
+      <div className="h-[100%] flex flex-col justify-center items-end">
+        <div className="inline-flex flex-row items-baseline">
+          <div className="w-[20px] h-[20px] rounded-[50%] bg-[#ff6384] mr-[6px]"></div>
+          <span className="text-[24px]">Supermarkets</span>
+        </div>
+        <div className="inline-flex flex-row items-baseline">
+          <div className="w-[20px] h-[20px] rounded-[50%] bg-[#36a2eb] mr-[6px]"></div>
+          <span className="text-[24px]">Online shops</span>
+        </div>
+        <div className="inline-flex flex-row items-baseline">
+          <div className="w-[20px] h-[20px] rounded-[50%] bg-[#ffcd56] mr-[6px]"></div>
+          <span className="text-[24px]">Online services</span>
+        </div>
+        <div className="inline-flex flex-row items-baseline">
+          <div className="w-[20px] h-[20px] rounded-[50%] bg-[#627b3c] mr-[6px]"></div>
+          <span className="text-[24px]">Pharmacies</span>
+        </div>
+      </div>
+    );
   };
 
   const GraphicSection = () => {
-    // useEffect(() => {
-    //   Highcharts.chart("doughnutChart", {
-    //     chart: {
-    //       plotBackgroundColor: null,
-    //       plotBorderWidth: null,
-    //       plotShadow: false,
-    //       type: "pie",
-    //     },
-    //     title: {
-    //       text: "",
-    //       align: "left",
-    //     },
-    //     // tooltip: {
-    //     //   pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
-    //     // },
-    //     accessibility: {
-    //       point: {
-    //         valueSuffix: "%",
-    //       },
-    //     },
-    //     plotOptions: {
-    //       pie: {
-    //         allowPointSelect: true,
-    //         cursor: "pointer",
-    //         dataLabels: {
-    //           enabled: false,
-    //         },
-    //         showInLegend: true,
-    //       },
-    //     },
-    //     series: [
-    //       {
-    //         name: "Brands",
-    //         colorByPoint: true,
-    //         data: [
-    //           {
-    //             name: "Chrome",
-    //             y: 74.77,
-    //             // sliced: true,
-    //             // selected: true,
-    //           },
-    //           {
-    //             name: "Edge",
-    //             y: 12.82,
-    //           },
-    //           {
-    //             name: "Firefox",
-    //             y: 4.63,
-    //           },
-    //           {
-    //             name: "Safari",
-    //             y: 2.44,
-    //           },
-    //           {
-    //             name: "Internet Explorer",
-    //             y: 2.02,
-    //           },
-    //           {
-    //             name: "Other",
-    //             y: 3.28,
-    //           },
-    //         ],
-    //       },
-    //     ],
-    //   });
-    // });
     return (
-      <div className="w-[50%] h-[50%]">
+      <div className="w-[65%] h-full">
         <Pie
           data={{
-            labels: ["Red", "Blue", "Yellow"],
+            labels: [
+              "Supermarkets",
+              "Online shops",
+              "Online services",
+              "Pharmacies",
+            ],
             datasets: [
               {
                 label: "Percent",
-                data: [300, 50, 100],
+                data: [32, 40, 23, 5],
                 backgroundColor: [
-                  "rgb(255, 99, 132)",
-                  "rgb(54, 162, 235)",
-                  "rgb(255, 205, 86)",
+                  "#ff6384",
+                  "#36a2eb",
+                  "#ffcd56",
+                  "rgb(98, 123, 60)",
                 ],
                 hoverOffset: 4,
               },
             ],
           }}
-          options={{}}
+          options={{
+            responsive: true,
+            plugins: {
+              legend: {
+                position: "left",
+                display: false,
+              },
+
+              options: { scales: { scaleLabel: { fontSize: 24 } } },
+            },
+          }}
         />
       </div>
-      // <div id="doughnutChart" className=""></div>
     );
   };
 
   return (
     <div
-      className={`flex flex-col w-3/4 px-6 py-4 ${color} text-black rounded-3xl shadow-2xl select-none`}
+      className={`flex flex-row w-3/4 px-6 py-4 ${color} text-black rounded-3xl shadow-2xl select-none`}
     >
-      <Title graphicTitle={`${graphicTitle}`} />
-      <MainInformation mainInformation={`${mainInformation}`} />
-      <GraphicSection />
+      <div className={"flex flex-col w-1/4 h-full"}>
+        <Title graphicTitle={`${graphicTitle}`} />
+        <MainInformation mainInformation={`${mainInformation}`} />
+        <GraphicInformation />
+      </div>
+      <div className={"w-3/4 h-full flex justify-center"}>
+        <GraphicSection />
+      </div>
     </div>
   );
 };

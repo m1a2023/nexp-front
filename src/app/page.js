@@ -66,7 +66,7 @@ export default function Home() {
           {/*DEMO BLOCKS! DO NOT DELETE!*/}
         </div>
       </div>
-      <TemplateAbsoluteButton styles={styles} />
+      {/* <TemplateAbsoluteButton styles={styles} /> */}
     </div>
   );
 }

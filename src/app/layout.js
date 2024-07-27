@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./assets/globals.css";
 import { Sidebar } from "./components/sidebar";
+import { TemplateAbsoluteButton } from "./components/absoluteButton";
 import styles from "./assets/page.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
           <Sidebar />
         </div>
         <div className={styles.generalPage}>{children}</div>
+        <TemplateAbsoluteButton styles={styles} />
       </body>
     </html>
   );
