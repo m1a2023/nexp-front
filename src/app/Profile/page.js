@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Goals } from "../components/goals";
 import { ProfileCardTemplate } from "../components/profileCard";
-import BackgroundPic2 from "../../../public/profile-bg-element2.png";
-import BackgroundPic3 from "../../../public/profile-bg-element3.png";
+import BackgroundProfilePic2 from "../../../public/profile-bg-element2.png";
+import BackgroundProfilePic3 from "../../../public/profile-bg-element3.png";
 
 export default function Profile() {
   return (
@@ -17,7 +17,7 @@ export default function Profile() {
         <div className="relative rounded-2xl w-full h-full overflow-hidden">
           <Image
             className="absolute"
-            src={BackgroundPic3}
+            src={BackgroundProfilePic3}
             width={400}
             height={400}
             quality={100}
@@ -30,7 +30,7 @@ export default function Profile() {
         <div className="relative w-full h-full">
           <Image
             className="rounded-2xl"
-            src={BackgroundPic2}
+            src={BackgroundProfilePic2}
             quality={100}
             layout="fill"
             objectFit="cover"
