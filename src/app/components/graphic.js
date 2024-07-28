@@ -60,7 +60,7 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
 
   const GraphicSection = () => {
     return (
-      <div className="w-[80%] h-full flex justify-center items-center">
+      <div className="w-[70%] h-full flex justify-center items-center">
         <Pie
           data={{
             labels: [
@@ -103,12 +103,12 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
     <div
       className={`flex flex-row w-3/4 px-6 py-4 ${color} text-black rounded-3xl shadow-2xl select-none`}
     >
-      <div className={"flex flex-col w-1/2 h-full"}>
+      <div className={"flex flex-col w-[42%] h-full"}>
         <Title graphicTitle={`${graphicTitle}`} />
         <MainInformation mainInformation={`${mainInformation}`} />
         <GraphicInformation />
       </div>
-      <div className={"w-1/2 h-full flex justify-center"}>
+      <div className={"w-[58%] h-full flex justify-center"}>
         <GraphicSection />
       </div>
     </div>
