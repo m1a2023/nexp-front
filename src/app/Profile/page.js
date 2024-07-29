@@ -9,9 +9,9 @@ export default function Profile() {
     <div className="flex flex-row h-full w-full bg-gray-200">
       <div className="flex flex-col w-1/3 min-w-[33%] p-6 pr-3 gap-y-6 justify-start text-xl h-full">
         <ProfileCardTemplate
-          name={"name"}
+          name={"Name"}
           nickname={"nickname"}
-          age={"20"}
+          age={"20" + "y.o."}
           email={"example@email.com"}
         />
         <div className="relative rounded-2xl w-full h-full overflow-hidden">
