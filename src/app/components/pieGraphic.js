@@ -2,7 +2,7 @@ import Chart from "chart.js/auto";
 import { useEffect } from "react";
 import { Doughnut, Pie } from "react-chartjs-2";
 
-export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
+export const TemplatePieGraphic = ({ graphicTitle, color }) => {
   const Title = ({ graphicTitle }) => {
     return (
       <div className="flex w-full justify-start font-bold text-lg">
@@ -11,7 +11,7 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
     );
   };
 
-  const MainInformation = ({ mainInformation }) => {
+  const MainInformation = () => {
     return <div>By category</div>;
   };
 
@@ -105,7 +105,7 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
     >
       <div className={"flex flex-col w-[42%] h-full"}>
         <Title graphicTitle={`${graphicTitle}`} />
-        <MainInformation mainInformation={`${mainInformation}`} />
+        <MainInformation />
         <GraphicInformation />
       </div>
       <div className={"w-[58%] h-full flex justify-center"}>
