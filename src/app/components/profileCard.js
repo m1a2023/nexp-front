@@ -39,7 +39,7 @@ export const ProfileCardTemplate = ({ name, nickname, age, email }) => {
         <div className="flex flex-row w-full gap-x-3">
           <div className="opacity-40">age</div>
           <div className="truncate hover:text-electric-indigo duration-200">
-            {age} y.o.
+            {age}
           </div>
         </div>
       </div>

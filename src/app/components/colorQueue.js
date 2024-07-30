@@ -1,7 +1,8 @@
 const colorQ = {
   AshGray: "#cad5ca",
-  MediumStateBlue: "#8075ff",
-  Rose: "#fda4af",
+  ElectricIndigo: "#6320ee",
+  White: "#ffffff",
+  RoseBright: "#f8f0fb",
 };
 
 let offset = -1;
