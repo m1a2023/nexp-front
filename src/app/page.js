@@ -90,7 +90,11 @@ export default function Home() {
                 </div>
               ) : (
                 <div className="h-full w-full p-5 flex justify-center items-end">
-                  <div className="max-h-[300px] max-w-[150px] overflow-auto resize">
+                  <div
+                    className={
+                      styles.pieChartPreviewBlock + " overflow-auto resize"
+                    }
+                  >
                     <svg
                       width="100%"
                       height="100%"
