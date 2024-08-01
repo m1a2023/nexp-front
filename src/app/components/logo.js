@@ -1,11 +1,9 @@
-import Link from "next/link";
+import Image from "next/image";
 
-export function Logo() {
+export const Logo = ({ source, className }) => {
   return (
-    <div className="flex justify-center w-full">
-      <Link href="/">
-        <div className="flex w-20 h-20 justify-center bg-gray-300 rounded-full border-4 border-lime-300"></div>
-      </Link>
+    <div className={`relative + ${className}`}>
+      <Image src={source} width={100} quality={100} alt="Logo" />
     </div>
   );
-}
+};
