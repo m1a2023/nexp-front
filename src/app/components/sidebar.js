@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
-import { Logo } from "./logo";
+import { AxpenLogo, Logo } from "./logo";
 import { changeColor } from "./colorQueue";
 import { useState } from "react";
-import logo from "../../../public/profile-bg-element3.png";
+import logo from "../../../public/logo[white].svg";
 import { Quit } from "./quit";
 
 const SidebarLinkTemplate = ({ href, name }) => {
@@ -41,7 +41,19 @@ export const Sidebar = () => {
   return (
     <div className="flex p-5 grow-0 flex-col h-full w-full justify-start space-y-10 bg-black">
       <div className="flex justify-center h-fit">
-        <Logo source={logo} className="flex justify-center pt-[10%]" />
+        <Logo
+          classLogo="flex hidden flex-col gap-5 justify-center pt-[10%]"
+          source={logo}
+        />
+        <AxpenLogo
+          classLogo=""
+          width="150"
+          height="150"
+          viewBox="0 0 150 150"
+          fill="fill"
+          stroke="white"
+          strokeWidth="7"
+        />
       </div>
       <div className="flex flex-col h-full justify-center text-2xl gap-2 select-none">
         <SidebarLinkTemplate href="/" name="Overview" />
