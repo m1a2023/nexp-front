@@ -11,15 +11,16 @@ export default function Profile() {
         <ProfileCardTemplate
           name={"Name"}
           nickname={"nickname"}
-          age={"20" + "y.o."}
+          age={"20" + " y.o."}
           email={"example@email.com"}
         />
         <div className="relative rounded-2xl w-full h-full overflow-hidden">
           <Image
             className="absolute"
             src={BackgroundProfilePic3}
-            width={400}
-            height={400}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            width={300}
+            height={300}
             quality={100}
             alt="bg-pic"
           />

@@ -47,8 +47,8 @@ export const Sidebar = () => {
         />
         <AxpenLogo
           classLogo=""
-          width="150"
-          height="150"
+          width="120"
+          height="120"
           viewBox="0 0 150 150"
           fill="fill"
           stroke="white"
@@ -62,7 +62,7 @@ export const Sidebar = () => {
         <SidebarLinkTemplate href="/Tables" name="Tables" />
         <SidebarLinkTemplate href="/About" name="About" />
       </div>
-      <div className="flex justify-center h-[25%]">
+      <div className="flex w-full justify-start px-10 p-3 h-[25%]">
         <Quit classQuit={"flex"} />
       </div>
     </div>
