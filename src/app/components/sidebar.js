@@ -57,10 +57,10 @@ export const Sidebar = () => {
       </div>
       <div className="flex flex-col h-full justify-center text-2xl gap-2 select-none">
         <SidebarLinkTemplate href="/" name="Overview" />
-        <SidebarLinkTemplate href="/Profile" name="Profile" />
-        <SidebarLinkTemplate href="/Settings" name="Settings" />
-        <SidebarLinkTemplate href="/Tables" name="Tables" />
-        <SidebarLinkTemplate href="/About" name="About" />
+        <SidebarLinkTemplate href="/profile" name="Profile" />
+        <SidebarLinkTemplate href="/settings" name="Settings" />
+        <SidebarLinkTemplate href="/tables" name="Tables" />
+        <SidebarLinkTemplate href="/about" name="About" />
       </div>
       <div className="flex w-full justify-start px-10 p-3 h-[25%]">
         <Quit classQuit={"flex"} />
