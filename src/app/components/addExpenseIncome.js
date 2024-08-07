@@ -69,7 +69,7 @@ export const ExpenseIncomeBlock = ({ classExpenseIncome }) => {
       <div className="flex flex-col gap-y-2">
         <div className="font-semibold">Type</div>
 
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row gap-4 justify-center ">
           <div className="flex gap-2">
             <input
               type="radio"
@@ -91,21 +91,102 @@ export const ExpenseIncomeBlock = ({ classExpenseIncome }) => {
       </div>
     );
   };
-  const Label = () => {};
-  const Amount = () => {};
-  const Tags = () => {};
-  const Save = () => {};
+  const Label = () => {
+    return (
+      <div className="flex flex-col gap-y-2">
+        <div className="font-semibold">Label</div>
+
+        <div className="flex justify-center w-full">
+          <input
+            className="flex p-1 w-[75%] text-lg ring-2 ring-black focus:ring-black outline-none rounded-md"
+            placeholder="Enter a label"
+          ></input>
+        </div>
+      </div>
+    );
+  };
+  const Amount = () => {
+    return (
+      <div className="flex flex-col gap-y-2">
+        <div className="font-semibold">Amount</div>
+
+        <div className="flex justify-center w-full">
+          <input
+            className="flex p-1 w-[75%] h-[100%] text-lg ring-2 ring-black focus:ring-black outline-none rounded-md"
+            placeholder="Enter an amount"
+          ></input>
+        </div>
+      </div>
+    );
+  };
+  const Tags = () => {
+    const [activeTagIndex, setActiveTagIndex] = useState(null);
+
+    const tags = [
+      "Supermarkets",
+      "Online shops",
+      "Pharmacies",
+      "Online services",
+      "Other",
+    ];
+
+    function handleTagClick(index) {
+      setActiveTagIndex(index);
+    }
+
+    const Tag = ({ label, index }) => {
+      const tagColor = index === activeTagIndex ? "#6320ee" : "#000000";
+
+      return (
+        <button onClick={() => handleTagClick(index)}>
+          <div
+            className="flex flex-row w-fit justify-center p-2 text-white font-normal rounded-lg text-base flex-wrap"
+            style={{ backgroundColor: tagColor }}
+          >
+            <div>{label}</div>
+          </div>
+        </button>
+      );
+    };
+
+    return (
+      <div className="flex flex-col gap-y-2">
+        <div className="font-semibold">Tags</div>
+
+        <div className="flex relative *:rounded-lg flex-row flex-wrap gap-3">
+          {tags.map((label, index) => (
+            <Tag label={label} key={index} index={index} />
+          ))}
+        </div>
+      </div>
+    );
+  };
+  const Save = () => {
+    return (
+      <div className="flex justify-end w-full items-centre font-light rounded-xl">
+        <button>
+          <div className="flex justify-center bg-ash-gray w-fit px-8 py-1 font-light rounded-xl">
+            save
+          </div>
+        </button>
+      </div>
+    );
+  };
 
   return (
     <div
       className={`flex flex-col backdrop-blur-lg backdrop-brightness-75 w-full h-full ${classExpenseIncome} text-black text-2xl justify-center items-center select-none`}
     >
-      <div className="flex flex-col w-[35%] h-[74%] p-4 shadow-xl bg-white rounded-3xl items-center">
+      <div className="flex flex-col w-[35%] h-fit p-4 shadow-xl bg-white rounded-3xl items-center">
         <Head />
 
-        <div className="flex flex-col w-full h-full p-[8%]">
+        <div className="flex flex-col w-full h-full gap-4 p-[5%]">
           <Type />
+          <Label />
+          <Amount />
+          <Tags />
         </div>
+        <Save />
       </div>
     </div>
   );
