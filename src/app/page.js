@@ -6,7 +6,9 @@ import { TemplateMoneyCard } from "./components/moneyCard";
 import { TemplatePieGraphic } from "./components/pieGraphic";
 import { TemplateBarGraphic } from "./components/barGraphic";
 import { TemplateAbsoluteButton } from "./components/absoluteButton";
+import { AllMoneyBoxTemplate } from "./components/absoluteMoneyBox";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
   const [isPieChart, setIsPieChart] = useState(true);
@@ -17,11 +19,19 @@ export default function Home() {
 
   return (
     <div className="flex flex-row w-full box-border bg-gray-200">
-      <div
-        className="flex flex-col p-6 grow justify-start text-1xl h-full max-h-[100vh]
-        gap-6"
-      >
-        <div className="h-1/3 w-full flex flex-row py-3 gap-x-6 ">
+      <div className="flex flex-col p-6 grow justify-start text-1xl h-full max-h-[100vh]">
+        <div className={"h-1/3 w-full flex flex-row pb-6 gap-x-6"}>
+          {/* <div className="w-auto h-[100%] absolute flex justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25px"
+              viewBox="0 0 256 512"
+              className="fill-[#000]"
+            >
+              <path d="M9.4 278.6c-12.5-12.5-12.5-32.8 0-45.3l128-128c9.2-9.2 22.9-11.9 34.9-6.9s19.8 16.6 19.8 29.6l0 256c0 12.9-7.8 24.6-19.8 29.6s-25.7 2.2-34.9-6.9l-128-128z" />
+            </svg>
+          </div> */}
+
           <TemplateMoneyCard
             cardTitle={"Balance"}
             mainInformation={"199.3"}
@@ -46,13 +56,40 @@ export default function Home() {
             width={"w-1/4"}
           ></TemplateMoneyCard>
 
-          <TemplateMoneyCard
+          {/* <TemplateMoneyCard
             color={colors.AshGray}
-            cardTitle={"Money box"}
+            cardTitle={"all Money box"}
             mainInformation={"19,351"}
             currency={"RUB"}
             width={"w-1/4"}
-          ></TemplateMoneyCard>
+          ></TemplateMoneyCard> */}
+          <div
+            className={`flex flex-col justify-center items-center select-none w-1/4 max-h-[250px] rounded-3xl shadow-2xl capitalize border-[5px] border-[#0094FF] border-dashed`}
+            //flex-col snap-start
+            style={{ backgroundColor: "transparent" }}
+          >
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="90"
+                height="90"
+                color="#0094FF"
+                fill="none"
+              >
+                <path
+                  d="M12 4V20M20 12H4"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div className="text-[#0094FF] text-[24px] font-[700]">
+              <span>money box</span>
+            </div>
+          </div>
         </div>
 
         <div className={"h-2/3 w-full flex flex-row flex-nowrap gap-x-6"}>
@@ -68,7 +105,6 @@ export default function Home() {
             />
           )}
 
-          {/*DEMO BLOCKS! DO NOT DELETE!*/}
           <div className="flex flex-col w-1/4 gap-6">
             <div className="flex w-full h-full pl-4 pr-3 pb-2 pt-3 grow-0 font-bold text-neutral-800 bg-gray-100 text-lg rounded-3xl shadow-2xl select-none">
               Demo block
@@ -91,9 +127,7 @@ export default function Home() {
               ) : (
                 <div className="h-full w-full p-5 flex justify-center items-end">
                   <div
-                    className={
-                      styles.pieChartPreviewBlock + " overflow-auto resize"
-                    }
+                    className={styles.pieChartPreviewBlock + " overflow-auto"}
                   >
                     <svg
                       width="100%"
@@ -139,10 +173,10 @@ export default function Home() {
               )}
             </div>
           </div>
-          {/*DEMO BLOCKS! DO NOT DELETE!*/}
         </div>
       </div>
-      {/* <TemplateAbsoluteButton styles={styles} /> */}
+      <TemplateAbsoluteButton styles={styles} />
+      {/* <AllMoneyBoxTemplate styles={styles} /> */}
     </div>
   );
 }

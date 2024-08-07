@@ -13,6 +13,7 @@
 .addInfoBtn {
   width: 60px;
   height: 60px;
+  background-color: red;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -23,11 +24,6 @@
   box-shadow: 0 25px 50px -12px rgb(0, 0, 0);
   cursor: pointer;
 }
-
-.addExpensesBtn {
-  background-color: rgb(218, 41, 41);
-}
-
 
 @media (min-width: 1920px) {
   .pieChartPreviewBlock {
