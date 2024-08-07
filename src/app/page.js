@@ -68,7 +68,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <TemplateAbsoluteButton styles={styles} />
+      {/* <TemplateAbsoluteButton styles={styles} /> */}
     </div>
   );
 }
