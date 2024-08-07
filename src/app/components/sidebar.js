@@ -25,19 +25,19 @@ export const Sidebar = () => {
           </li>
         </Link>
 
-        <Link href="/profile">
+        <Link href="/route1">
           <li className="flex justify-center p-3 rounded-3xl transition-all duration-300 hover:bg-ash-gray hover:text-black select-none">
             Profile
           </li>
         </Link>
 
-        <Link href="/tables">
+        <Link href="/route2">
           <li className="flex justify-center p-3 rounded-3xl transition-all duration-300 hover:bg-ash-gray hover:text-black select-none">
             Tables
           </li>
         </Link>
 
-        <Link href="/settings">
+        <Link href="/route3">
           <li className="flex justify-center p-3 rounded-3xl transition-all duration-300 hover:bg-ash-gray hover:text-black select-none">
             Settings
           </li>
