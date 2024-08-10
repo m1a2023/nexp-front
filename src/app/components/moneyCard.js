@@ -25,27 +25,6 @@ export const TemplateMoneyCard = ({
       </div>
     );
   };
-
-  /*
-  function SetMoneyCardTitle({ cardTitle }) {
-    //TODO: write class
-    return (
-      <div className="flex w-full h-full justify-start font-bold text-lg">
-        <div className="flex">{cardTitle}</div>
-      </div>
-    );
-  }
-
-  function SetMoneyCardMainInformation({ mainInformation }) {
-    //TODO: write class
-    return (
-      <div className="flex grow text-xl justify-start w-full ">
-        <div className="truncate text-4xl font-bold">{mainInformation}</div>
-      </div>
-    );
-  }
-  */
-
   return (
     <div
       className={`flex flex-col snap-start ${width}  max-h-[250px] ${distance} pl-4 pr-3 pb-2 pt-3 grow-0 justify-start rounded-3xl shadow-2xl select-none capitalize`}

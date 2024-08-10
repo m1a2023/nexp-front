@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import { colors } from "./components/header";
-import styles from "./assets/page.module.css";
 import { TemplateMoneyCard } from "./components/moneyCard";
 import { TemplatePieGraphic } from "./components/pieGraphic";
 import { TemplateBarGraphic } from "./components/barGraphic";
 import { TemplateAbsoluteButton } from "./components/absoluteButton";
 import { AllMoneyBoxTemplate } from "./components/absoluteMoneyBox";
+import { TemplateGraphic } from "./components/graphic";
 
 export default function Home() {
   const [isPieChart, setIsPieChart] = useState(true);
@@ -22,31 +22,29 @@ export default function Home() {
         gap-6"
       >
         <div className="h-1/3 w-full flex flex-row py-3 gap-6 ">
-          <div className="w-3/4 h-full flex flex-row gap-6">
-            <TemplateMoneyCard
-              cardTitle={"Balance"}
-              mainInformation={"199.3"}
-              currency={"USD"}
-              color={colors.ElectricIndigo}
-              width={"w-1/3"}
-            ></TemplateMoneyCard>
+          <TemplateMoneyCard
+            cardTitle={"Balance"}
+            mainInformation={"199.3"}
+            currency={"USD"}
+            color={colors.ElectricIndigo}
+            width={"w-1/4"}
+          />
 
-            <TemplateMoneyCard
-              cardTitle={"Income"}
-              mainInformation={"1,300"}
-              currency={"USD"}
-              color={colors.RaisinBlack}
-              width={"w-1/3"}
-            ></TemplateMoneyCard>
+          <TemplateMoneyCard
+            cardTitle={"Income"}
+            mainInformation={"1,300"}
+            currency={"USD"}
+            color={colors.RaisinBlack}
+            width={"w-1/4"}
+          />
 
-            <TemplateMoneyCard
-              color={colors.RoseBright}
-              cardTitle={"Expenses"}
-              currency={"USD"}
-              mainInformation={"1,100.7"}
-              width={"w-1/3"}
-            ></TemplateMoneyCard>
-          </div>
+          <TemplateMoneyCard
+            color={colors.RoseBright}
+            cardTitle={"Expenses"}
+            currency={"USD"}
+            mainInformation={"1,100.7"}
+            width={"w-1/4"}
+          />
 
           <TemplateMoneyCard
             color={colors.AshGray}
@@ -54,7 +52,7 @@ export default function Home() {
             mainInformation={"19,351"}
             currency={"RUB"}
             width={"w-1/4"}
-          ></TemplateMoneyCard>
+          />
         </div>
 
         <div className={"h-2/3 w-full flex flex-row flex-nowrap gap-x-6"}>

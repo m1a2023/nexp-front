@@ -3,7 +3,6 @@ import Link from "next/link";
 import { AxpenLogo, Logo } from "./logo";
 import { changeColor } from "./colorQueue";
 import { useState } from "react";
-import logo from "../../../public/logo[white].svg";
 import { Quit } from "./quit";
 
 const SidebarLinkTemplate = ({ href, name }) => {
