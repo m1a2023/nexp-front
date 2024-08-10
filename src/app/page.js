@@ -22,7 +22,7 @@ export default function Home() {
         gap-6"
       >
         <div className="h-1/3 w-full flex flex-row py-3 gap-6 ">
-          <div className="w-3/4 h-full flex felx-row gap-6">
+          <div className="w-3/4 h-full flex flex-row gap-6">
             <TemplateMoneyCard
               cardTitle={"Balance"}
               mainInformation={"199.3"}
@@ -33,7 +33,7 @@ export default function Home() {
 
             <TemplateMoneyCard
               cardTitle={"Income"}
-              mainInformation={"1,300"}:w3
+              mainInformation={"1,300"}
               currency={"USD"}
               color={colors.RaisinBlack}
               width={"w-1/3"}
