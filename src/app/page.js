@@ -18,7 +18,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-row w-full box-border bg-gray-200">
+    <div className="flex flex-row w-full box-border bg-gray-200 relative">
       <div className="flex flex-col p-6 grow justify-start text-1xl h-full max-h-[100vh]">
         <div className={"h-1/3 w-full flex flex-row pb-6 gap-x-6"}>
           {/* <div className="w-auto h-[100%] absolute flex justify-center">
@@ -56,14 +56,14 @@ export default function Home() {
             width={"w-1/4"}
           ></TemplateMoneyCard>
 
-          {/* <TemplateMoneyCard
+          <TemplateMoneyCard
             color={colors.AshGray}
             cardTitle={"all Money box"}
             mainInformation={"19,351"}
             currency={"RUB"}
             width={"w-1/4"}
-          ></TemplateMoneyCard> */}
-          <div
+          ></TemplateMoneyCard>
+          {/* <div
             className={`flex flex-col justify-center items-center select-none w-1/4 max-h-[250px] rounded-3xl shadow-2xl capitalize border-[5px] border-[#0094FF] border-dashed`}
             //flex-col snap-start
             style={{ backgroundColor: "transparent" }}
@@ -89,7 +89,7 @@ export default function Home() {
             <div className="text-[#0094FF] text-[24px] font-[700]">
               <span>money box</span>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className={"h-2/3 w-full flex flex-row flex-nowrap gap-x-6"}>
@@ -175,7 +175,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <TemplateAbsoluteButton styles={styles} />
+      {/* <TemplateAbsoluteButton styles={styles} /> */}
       {/* <AllMoneyBoxTemplate styles={styles} /> */}
     </div>
   );
