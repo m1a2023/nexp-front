@@ -7,8 +7,6 @@ import { TemplatePieGraphic } from "./components/pieGraphic";
 import { TemplateBarGraphic } from "./components/barGraphic";
 import { TemplateAbsoluteButton } from "./components/absoluteButton";
 import { AllMoneyBoxTemplate } from "./components/absoluteMoneyBox";
-import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
   const [isPieChart, setIsPieChart] = useState(true);

@@ -25,13 +25,9 @@ export default function RootLayout({ children }) {
         <div className={styles.sidebar}>
           <Sidebar />
         </div>
-        <div
-          className={styles.generalPage}
-        >
-          {children}
-        </div>
+        <div className={styles.generalPage}>{children}</div>
         <TemplateAbsoluteButton styles={styles} />
-        <AllMoneyBoxTemplate styles={styles} />
+        {/*<AllMoneyBoxTemplate styles={styles} />*/}
       </body>
     </html>
   );
