@@ -9,166 +9,206 @@ export const TemplateAbsoluteButton = ({ styles }) => {
     setIsAbsoluteBlock((current) => !current);
   }
 
-  function AddExpensesBlock({ display }) {
-    return (
-      <div
-        className={`backdrop-blur-lg backdrop-brightness-95 w-full h-full ${display} justify-center items-center `}
-      >
-        <div className="w-[35%] h-[60%] bg-gray-200 rounded-3xl flex flex-col items-center text-black p-4">
-          <h1 className="font-bold text-[28px]">Add Expenses</h1>
-          <div className="flex flex-col justify-center">
-            <div>
-              <label
-                for="price"
-                class="block text-sm font-medium leading-6 text-gray-900"
-              >
-                Price
-              </label>
-              <div class="relative mt-2 rounded-md shadow-sm">
-                <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                  <span class="text-gray-500 sm:text-sm">$</span>
-                </div>
-                <input
-                  type="text"
-                  name="price"
-                  id="price"
-                  class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  placeholder="0.00"
-                />
-                <div class="absolute inset-y-0 right-0 flex items-center">
-                  <label for="currency" class="sr-only">
-                    Currency
-                  </label>
-                  <select
-                    id="currency"
-                    name="currency"
-                    class="h-full rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-                  >
-                    <option>USD</option>
-                    <option>CAD</option>
-                    <option>EUR</option>
-                  </select>
-                </div>
-              </div>
+  const ExpenseIncomeBlock = ({ classExpenseIncome }) => {
+    const Quit = () => {
+      return (
+        <button
+          onClick={() => {
+            homePageAbsoluteBlock();
+          }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 170 170"
+            fill="none"
+          >
+            <circle cx="85" cy="85" r="85" fill="#0C0101" />
+            <rect
+              x="50.1396"
+              y="110.244"
+              width="85"
+              height="12.75"
+              rx="6.375"
+              transform="rotate(-45 50.1396 110.244)"
+              fill="white"
+            />
+            <rect
+              x="50.1396"
+              y="110.244"
+              width="85"
+              height="12.75"
+              rx="6.375"
+              transform="rotate(-45 50.1396 110.244)"
+              fill="white"
+            />
+            <rect
+              x="110.244"
+              y="119.86"
+              width="85"
+              height="12.75"
+              rx="6.375"
+              transform="rotate(-135 110.244 119.86)"
+              fill="white"
+            />
+            <rect
+              x="110.244"
+              y="119.86"
+              width="85"
+              height="12.75"
+              rx="6.375"
+              transform="rotate(-135 110.244 119.86)"
+              fill="white"
+            />
+          </svg>
+        </button>
+      );
+    };
+    const Head = () => {
+      return (
+        <div className="flex flex-row w-full">
+          <div className="flex justify-center font-semibold w-full">Add</div>
+          <Quit />
+        </div>
+      );
+    };
+    const Type = () => {
+      return (
+        <div className="flex flex-col gap-y-2">
+          <div className="font-semibold">Type</div>
+
+          <div className="flex flex-row gap-4 justify-center ">
+            <div className="flex gap-2">
+              <input
+                type="radio"
+                id="ExpenseRadiobutton"
+                name="typeofAdding"
+                value=""
+              ></input>
+              <label for="ExpenseRadiobutton">Expense</label>
             </div>
-            <div>
-              <div>
-                <label
-                  id="listbox-label"
-                  class="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  Assigned to
-                </label>
-                <div class="relative mt-2">
-                  <button
-                    type="button"
-                    class="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                    aria-haspopup="listbox"
-                    aria-expanded="true"
-                    aria-labelledby="listbox-label"
-                  >
-                    <span class="flex items-center">
-                      <span class="ml-3 block truncate">Tom Cook</span>
-                    </span>
-                    <span class="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
-                      <svg
-                        class="h-5 w-5 text-gray-400"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </button>
 
-                  {/* <!--
-      Select popover, show/hide based on select state.
-
-      Entering: ""
-        From: ""
-        To: ""
-      Leaving: "transition ease-in duration-100"
-        From: "opacity-100"
-        To: "opacity-0"
-    --> */}
-                  <ul
-                    class="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
-                    tabindex="-1"
-                    role="listbox"
-                    aria-labelledby="listbox-label"
-                    aria-activedescendant="listbox-option-3"
-                  >
-                    {/* <!--
-        Select option, manage highlight styles based on mouseenter/mouseleave and keyboard navigation.
-
-        Highlighted: "bg-indigo-600 text-white", Not Highlighted: "text-gray-900"
-      --> */}
-                    <li
-                      class="relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900"
-                      id="listbox-option-0"
-                      role="option"
-                    >
-                      <div class="flex items-center">
-                        {/* <!-- Selected: "font-semibold", Not Selected: "font-normal" --> */}
-                        <span class="ml-3 block truncate font-normal">
-                          Wade Cooper
-                        </span>
-                      </div>
-                      {/* 
-        <!--
-          Checkmark, only display for selected option.
-
-          Highlighted: "text-white", Not Highlighted: "text-indigo-600"
-        --> */}
-                      <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-600">
-                        <svg
-                          class="h-5 w-5"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                      </span>
-                    </li>
-
-                    {/* <!-- More items... --> */}
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div>
-              <button>Send</button>
+            <div className="flex gap-2">
+              <input
+                type="radio"
+                id="IncomeRadiobutton"
+                name="typeofAdding"
+                value=""
+              ></input>
+              <label for="IncomeRadiobutton">Income</label>
             </div>
           </div>
-          <button
-            className="p-4 bg-[red] text-white rounded-3xl"
-            onClick={() => {
-              homePageAbsoluteBlock();
-            }}
-          >
-            Exit dialog window
+        </div>
+      );
+    };
+    const Label = () => {
+      return (
+        <div className="flex flex-col gap-y-2">
+          <div className="font-semibold">Label</div>
+
+          <div className="flex justify-center w-full">
+            <input
+              className="flex p-1 w-[75%] text-lg ring-2 ring-black focus:ring-black outline-none rounded-md"
+              placeholder="Enter a label"
+            ></input>
+          </div>
+        </div>
+      );
+    };
+    const Amount = () => {
+      return (
+        <div className="flex flex-col gap-y-2">
+          <div className="font-semibold">Amount</div>
+
+          <div className="flex justify-center w-full">
+            <input
+              className="flex p-1 w-[75%] h-[100%] text-lg ring-2 ring-black focus:ring-black outline-none rounded-md"
+              placeholder="Enter an amount"
+            ></input>
+          </div>
+        </div>
+      );
+    };
+    const Tags = () => {
+      const [activeTagIndex, setActiveTagIndex] = useState(null);
+
+      const tags = [
+        "Supermarkets",
+        "Online shops",
+        "Pharmacies",
+        "Online services",
+        "Other",
+      ];
+
+      function handleTagClick(index) {
+        setActiveTagIndex(index);
+      }
+
+      const Tag = ({ label, index }) => {
+        const tagColor = index === activeTagIndex ? "#6320ee" : "#000000";
+
+        return (
+          <button onClick={() => handleTagClick(index)}>
+            <div
+              className="flex flex-row w-fit justify-center p-2 text-white font-normal rounded-lg text-base flex-wrap"
+              style={{ backgroundColor: tagColor }}
+            >
+              <div>{label}</div>
+            </div>
           </button>
+        );
+      };
+
+      return (
+        <div className="flex flex-col gap-y-2">
+          <div className="font-semibold">Tags</div>
+
+          <div className="flex relative *:rounded-lg flex-row flex-wrap gap-3">
+            {tags.map((label, index) => (
+              <Tag label={label} key={index} index={index} />
+            ))}
+          </div>
+        </div>
+      );
+    };
+    const Save = () => {
+      return (
+        <div className="flex justify-end w-full items-centre font-light rounded-xl">
+          <button>
+            <div className="flex justify-center bg-ash-gray w-fit px-8 py-1 font-light rounded-xl">
+              save
+            </div>
+          </button>
+        </div>
+      );
+    };
+
+    return (
+      <div
+        className={`flex flex-col backdrop-blur-lg backdrop-brightness-75 w-full h-full ${classExpenseIncome} text-black text-2xl justify-center items-center select-none`}
+      >
+        <div className="flex flex-col w-[35%] h-fit p-4 shadow-xl bg-white rounded-3xl items-center">
+          <Head />
+
+          <div className="flex flex-col w-full h-full gap-4 p-[5%]">
+            <Type />
+            <Label />
+            <Amount />
+            <Tags />
+          </div>
+          <Save />
         </div>
       </div>
     );
-  }
+  };
 
   return (
     <>
       {usePathname() == "/" ? (
         isAbsoluteBlock ? (
           <div className="absolute w-full h-full flex flex-row">
-            <AddExpensesBlock display={"flex"} />
+            <ExpenseIncomeBlock display={"flex"} />
           </div>
         ) : (
           <div
@@ -182,7 +222,6 @@ export const TemplateAbsoluteButton = ({ styles }) => {
             }}
           >
             <span>
-              {/* <i class="fa-solid fa-plus"></i> */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

@@ -41,10 +41,6 @@ export const Sidebar = () => {
   return (
     <div className="flex p-5 grow-0 flex-col h-full w-full justify-start space-y-10 bg-black">
       <div className="flex justify-center h-fit">
-        <Logo
-          classLogo="flex hidden flex-col gap-5 justify-center pt-[10%]"
-          source={logo}
-        />
         <AxpenLogo
           classLogo=""
           width="120"
@@ -58,8 +54,8 @@ export const Sidebar = () => {
       <div className="flex flex-col h-full justify-center text-2xl gap-2 select-none">
         <SidebarLinkTemplate href="/" name="Overview" />
         <SidebarLinkTemplate href="/profile" name="Profile" />
-        <SidebarLinkTemplate href="/settings" name="Settings" />
         <SidebarLinkTemplate href="/tables" name="Tables" />
+        <SidebarLinkTemplate href="/settings" name="Settings" />
         <SidebarLinkTemplate href="/about" name="About" />
       </div>
       <div className="flex w-full justify-start px-10 p-3 h-[25%]">

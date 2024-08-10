@@ -60,7 +60,7 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
 
   const GraphicSection = () => {
     return (
-      <div className="w-[80%] h-full flex justify-center items-center">
+      <div className="w-[80%] bg-eme h-full flex justify-center items-center">
         <Pie
           data={{
             labels: [
@@ -73,12 +73,7 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
               {
                 label: "Percent",
                 data: [32, 40, 23, 5],
-                backgroundColor: [
-                  "#ff6384",
-                  "#36a2eb",
-                  "#ffcd56",
-                  "rgb(98, 123, 60)",
-                ],
+                backgroundColor: ["#dcb4eb ", "#6320ee", "#34d399", "#64748b"],
                 hoverOffset: 4,
               },
             ],

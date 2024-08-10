@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-import { Sidebar } from "./components/sidebar";
-import { Logo } from "./components/logo";
 import { colors } from "./components/header";
 import styles from "./assets/page.module.css";
 import { TemplateMoneyCard } from "./components/moneyCard";
@@ -57,6 +55,7 @@ export default function Home() {
             mainInformation={""}
             color={"bg-gray-100"}
           ></TemplateGraphic>
+
           {/*DEMO BLOCKS! DO NOT DELETE!*/}
           <div className="flex flex-col w-1/4 gap-6">
             <div className="flex w-1/8 h-full p-4 font-bold text-neutral-800 bg-gray-100 text-lg rounded-3xl shadow-2xl select-none">
@@ -68,7 +67,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* <TemplateAbsoluteButton styles={styles} /> */}
     </div>
   );
 }
