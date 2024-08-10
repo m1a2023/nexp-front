@@ -1,6 +1,4 @@
-import Chart from "chart.js/auto";
-import { useEffect } from "react";
-import { Doughnut, Pie } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 
 export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
   const Title = ({ graphicTitle }) => {
@@ -60,7 +58,7 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
 
   const GraphicSection = () => {
     return (
-      <div className="w-[80%] bg-eme h-full flex justify-center items-center">
+      <div className="w-[80%] h-full flex justify-center items-center">
         <Pie
           data={{
             labels: [
@@ -73,7 +71,12 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
               {
                 label: "Percent",
                 data: [32, 40, 23, 5],
-                backgroundColor: ["#dcb4eb ", "#6320ee", "#34d399", "#64748b"],
+                backgroundColor: [
+                  "#ff6384",
+                  "#36a2eb",
+                  "#ffcd56",
+                  "rgb(98, 123, 60)",
+                ],
                 hoverOffset: 4,
               },
             ],

@@ -48,7 +48,8 @@ export const TemplateMoneyCard = ({
 
   return (
     <div
-      className={`flex flex-col snap-start ${width} ${distance} pl-4 pr-3 pb-2 pt-3 grow-0 justify-start rounded-3xl shadow-2xl select-none`}
+      className={`flex flex-col snap-start ${width}  max-h-[250px] ${distance} pl-4 pr-3 pb-2 pt-3 grow-0 justify-start rounded-3xl shadow-2xl select-none capitalize`}
+      //  
       style={{ backgroundColor: color, color: textColor }}
     >
       <Title cardTitle={`${cardTitle}`} />

@@ -214,8 +214,7 @@ export const TemplateAbsoluteButton = ({ styles }) => {
           <div
             className={
               styles.addInfoBtn +
-              " absolute bottom-5 right-5 " +
-              styles.addExpensesBtn
+              " absolute bottom-5 right-5 "
             }
             onClick={() => {
               homePageAbsoluteBlock();
