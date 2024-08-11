@@ -158,8 +158,6 @@ export const TemplateBarGraphic = ({ graphicTitle, color }) => {
       <div className={"flex flex-col w-full h-full"}>
         <Title graphicTitle={`${graphicTitle}`} />
         <MainInformation />
-        {/* <GraphicInformation /> */}
-        {/* </div> */}
         <div className={"w-full h-full flex justify-center items-end"}>
           <GraphicSection />
         </div>

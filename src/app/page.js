@@ -1,12 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import { React, useState } from "react";
 import { colors } from "./components/header";
 import { TemplateMoneyCard } from "./components/moneyCard";
-import { TemplatePieGraphic } from "./components/pieGraphic";
+import { TemplateGraphic } from "./components/pieGraphic";
 import { TemplateBarGraphic } from "./components/barGraphic";
-import { TemplateAbsoluteButton } from "./components/absoluteButton";
-import { AllMoneyBoxTemplate } from "./components/absoluteMoneyBox";
-import { TemplateGraphic } from "./components/graphic";
+import styles from "./assets/page.module.css";
 
 export default function Home() {
   const [isPieChart, setIsPieChart] = useState(true);
@@ -57,10 +55,10 @@ export default function Home() {
 
         <div className={"h-2/3 w-full flex flex-row flex-nowrap gap-x-6"}>
           {isPieChart ? (
-            <TemplatePieGraphic
+            <TemplateGraphic
               graphicTitle={"Expenses"}
               color={"bg-gray-100"}
-            ></TemplatePieGraphic>
+            ></TemplateGraphic>
           ) : (
             <TemplateBarGraphic
               graphicTitle={"Expenses"}
