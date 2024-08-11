@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Goals } from "../components/goals";
-import { ProfileCardTemplate } from "../components/profileCard";
+import { Goals } from "../../components/goals";
+import { ProfileCardTemplate } from "../../components/profileCard";
 import BackgroundProfilePic2 from "../../../public/profile-bg-element2.png";
 import BackgroundProfilePic3 from "../../../public/profile-bg-element3.png";
 
