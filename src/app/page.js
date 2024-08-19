@@ -5,6 +5,7 @@ import { TemplateMoneyCard } from "./components/moneyCard";
 import { TemplateGraphic } from "./components/pieGraphic";
 import { TemplateBarGraphic } from "./components/barGraphic";
 import styles from "./assets/page.module.css";
+import { ExpensePerdayBlock } from "./components/expensePerDay";
 
 export default function Home() {
   const [isPieChart, setIsPieChart] = useState(true);
@@ -67,9 +68,7 @@ export default function Home() {
           )}
 
           <div className="flex flex-col w-1/4 gap-6">
-            <div className="flex w-1/8 h-full p-4 font-bold text-neutral-800 bg-gray-100 text-lg rounded-3xl shadow-2xl select-none">
-              Demo block
-            </div>
+            <ExpensePerdayBlock />
             <div
               onClick={homePageChangeChart}
               className="flex flex-col w-1/8 h-full pl-4 pr-3 pb-2 pt-3 grow-0 font-bold text-neutral-800  bg-gray-100 text-lg rounded-3xl shadow-2xl select-none"
