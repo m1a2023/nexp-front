@@ -2,7 +2,11 @@ import Chart from "chart.js/auto";
 import { useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 
-export const TemplateBarGraphic = ({ graphicTitle, color }) => {
+export const TemplateBarGraphic = ({
+  graphicTitle,
+  color,
+  graphicContainer,
+}) => {
   const Title = ({ graphicTitle }) => {
     return (
       <div className="flex w-full justify-start font-bold text-lg">
@@ -60,7 +64,7 @@ export const TemplateBarGraphic = ({ graphicTitle, color }) => {
 
   const GraphicSection = () => {
     return (
-      <div className="w-full h-[90%] flex justify-center p-2">
+      <div className={`w-[85%] h-[80%] flex justify-center items-center`}>
         <Bar
           data={{
             labels: [
@@ -153,7 +157,7 @@ export const TemplateBarGraphic = ({ graphicTitle, color }) => {
 
   return (
     <div
-      className={`flex w-3/4 px-6 py-4 ${color} text-black rounded-3xl shadow-2xl select-none`}
+      className={`flex w-3/4 px-6 py-4 ${color} text-black rounded-3xl shadow-2xl select-none ${graphicContainer}`}
     >
       <div className={"flex flex-col w-full h-full"}>
         <Title graphicTitle={`${graphicTitle}`} />

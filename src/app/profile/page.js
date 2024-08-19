@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { Goals } from "../../components/goals";
-import { ProfileCardTemplate } from "../../components/profileCard";
-import BackgroundProfilePic2 from "../../../public/profile-bg-element2.png";
-import BackgroundProfilePic3 from "../../../public/profile-bg-element3.png";
+import { Goals } from "@/app/components/goals";
+import { ProfileCardTemplate } from "@/app/components/profileCard";
+import BackgroundProfilePic2 from "/public/profile-bg-element2.png";
+import BackgroundProfilePic3 from "/public/profile-bg-element3.png";
 
 export default function Profile() {
   return (
@@ -18,7 +18,12 @@ export default function Profile() {
           <Image
             className="absolute"
             src={BackgroundProfilePic3}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            style={{
+              width: "100%",
+              height: '100%',
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
             width={300}
             height={300}
             quality={100}

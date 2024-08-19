@@ -79,25 +79,28 @@ export const TemplateAbsoluteButton = ({ styles }) => {
           <div className="font-semibold">Type</div>
 
           <div className="flex flex-row gap-4 justify-center ">
-            <div className="flex gap-2">
-              <input
-                type="radio"
-                id="ExpenseRadiobutton"
-                name="typeofAdding"
-                value=""
-              ></input>
-              <label for="ExpenseRadiobutton">Expense</label>
-            </div>
+            <fieldset >
+              <div className="flex gap-2">
+                <input
+                  type="radio"
+                  id="ExpenseRadiobutton"
+                  name="typeofAdding"
+                  value="expense"
+                  checked
+                ></input>
+                <label for="ExpenseRadiobutton">Expense</label>
+              </div>
 
-            <div className="flex gap-2">
-              <input
-                type="radio"
-                id="IncomeRadiobutton"
-                name="typeofAdding"
-                value=""
-              ></input>
-              <label for="IncomeRadiobutton">Income</label>
-            </div>
+              <div className="flex gap-2">
+                <input
+                  type="radio"
+                  id="IncomeRadiobutton"
+                  name="typeofAdding"
+                  value="income"
+                ></input>
+                <label for="IncomeRadiobutton">Income</label>
+              </div>
+            </fieldset>
           </div>
         </div>
       );
