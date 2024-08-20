@@ -78,29 +78,42 @@ export const TemplateAbsoluteButton = ({ styles }) => {
         <div className="flex flex-col gap-y-2">
           <div className="font-semibold">Type</div>
 
-          <div className="flex flex-row gap-4 justify-center ">
-            <fieldset >
-              <div className="flex gap-2">
-                <input
-                  type="radio"
-                  id="ExpenseRadiobutton"
-                  name="typeofAdding"
-                  value="expense"
-                  checked
-                ></input>
-                <label for="ExpenseRadiobutton">Expense</label>
-              </div>
+          <div
+            className={`${styles.form_radio} flex flex-row gap-4 justify-center`}
+          >
+            <div className="flex gap-2">
+              <input
+                className="hidden"
+                type="radio"
+                id="ExpenseRadiobutton"
+                name="typeofAdding"
+                value="expense"
+                defaultChecked
+              ></input>
 
-              <div className="flex gap-2">
-                <input
-                  type="radio"
-                  id="IncomeRadiobutton"
-                  name="typeofAdding"
-                  value="income"
-                ></input>
-                <label for="IncomeRadiobutton">Income</label>
-              </div>
-            </fieldset>
+              <label
+                htmlFor="ExpenseRadiobutton"
+                className={`${styles.radioLabel}`}
+              >
+                Expense
+              </label>
+            </div>
+
+            <div className="flex gap-2">
+              <input
+                className="hidden"
+                type="radio"
+                id="IncomeRadiobutton"
+                name="typeofAdding"
+                value="income"
+              ></input>
+              <label
+                htmlFor="IncomeRadiobutton"
+                className={`${styles.radioLabel}`}
+              >
+                Income
+              </label>
+            </div>
           </div>
         </div>
       );
@@ -112,6 +125,7 @@ export const TemplateAbsoluteButton = ({ styles }) => {
 
           <div className="flex justify-center w-full">
             <input
+              name="labelText"
               className="flex p-1 w-[75%] text-lg ring-2 ring-black focus:ring-black outline-none rounded-md"
               placeholder="Enter a label"
             ></input>
@@ -126,7 +140,8 @@ export const TemplateAbsoluteButton = ({ styles }) => {
 
           <div className="flex justify-center w-full">
             <input
-              className="flex p-1 w-[75%] h-[100%] text-lg ring-2 ring-black focus:ring-black outline-none rounded-md"
+              name="amountText"
+              className="flex p-1 w-[75%] text-lg ring-2 ring-black focus:ring-black outline-none rounded-md"
               placeholder="Enter an amount"
             ></input>
           </div>
