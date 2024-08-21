@@ -17,55 +17,54 @@ export default function Home() {
   return (
     <div className="flex flex-row w-full h-full box-border bg-gray-200">
       <div
-        className="flex flex-col p-6 grow justify-start text-1xl h-full max-h-[100vh]
-        gap-6"
+        className={`${styles.mainContainer} p-6 grow justify-start text-1xl h-full max-h-[100vh]
+        gap-x-6`}
       >
-        <div className="h-1/3 w-full flex flex-row py-3 gap-6 ">
-          <TemplateMoneyCard
-            cardTitle={"Balance"}
-            mainInformation={"199.3"}
-            currency={"USD"}
-            color={colors.ElectricIndigo}
-            width={"w-1/4"}
-          />
+        <TemplateMoneyCard
+          cardTitle={"Balance"}
+          mainInformation={"199.3"}
+          currency={"USD"}
+          color={colors.ElectricIndigo}
+          width={"w-[100%]"}
+        />
 
-          <TemplateMoneyCard
-            cardTitle={"Income"}
-            mainInformation={"1,300"}
-            currency={"USD"}
-            color={colors.RaisinBlack}
-            width={"w-1/4"}
-          />
+        <TemplateMoneyCard
+          cardTitle={"Income"}
+          mainInformation={"1,300"}
+          currency={"USD"}
+          color={colors.RaisinBlack}
+          width={"w-[100%]"}
+        />
 
-          <TemplateMoneyCard
-            color={colors.RoseBright}
-            cardTitle={"Expenses"}
-            currency={"USD"}
-            mainInformation={"1,100.7"}
-            width={"w-1/4"}
-          />
+        <TemplateMoneyCard
+          color={colors.RoseBright}
+          cardTitle={"Expenses"}
+          currency={"USD"}
+          mainInformation={"1,100.7"}
+          width={"w-[100%]"}
+        />
 
-          <TemplateMoneyCard
-            color={colors.AshGray}
-            cardTitle={"all Money box"}
-            mainInformation={"19,351"}
-            currency={"RUB"}
-            width={"w-1/4"}
-          />
-        </div>
+        <TemplateMoneyCard
+          color={colors.AshGray}
+          cardTitle={"all Money box"}
+          mainInformation={"19,351"}
+          currency={"RUB"}
+          width={"w-[100%]"}
+        />
 
-        <div className={"h-2/3 w-full flex flex-row flex-nowrap gap-x-6"}>
-          {isPieChart ? (
-            <TemplateGraphic
-              graphicTitle={"Expenses"}
-              color={"bg-gray-100"}
-            ></TemplateGraphic>
-          ) : (
-            <TemplateBarGraphic
-              graphicTitle={"Expenses"}
-              color={"bg-gray-100"}
-            />
-          )}
+        {isPieChart ? (
+          <TemplateGraphic
+            graphicTitle={"Expenses"}
+            color={"bg-gray-100"}
+            graphicContainer={styles.graphicContainer}
+          ></TemplateGraphic>
+        ) : (
+          <TemplateBarGraphic
+            graphicTitle={"Expenses"}
+            color={"bg-gray-100"}
+            graphicContainer={styles.graphicContainer}
+          />
+        )}
 
           <div className="flex flex-col w-1/4 gap-6">
             <ExpensePerdayBlock />

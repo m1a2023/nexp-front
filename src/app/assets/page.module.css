@@ -4,6 +4,20 @@
   height: 100%;
 }
 
+.mainContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 2fr;
+  grid-auto-flow: row;
+}
+
+.graphicContainer {
+  grid-column: span 3;
+  width: 100%;
+}
+
 .sidebar {
   display: flex;
   width: 20%;
@@ -25,7 +39,37 @@
   cursor: pointer;
 }
 
-@media (min-width: 1920px) {
+.radioLabel {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  line-height: 18px;
+  user-select: none;
+}
+
+.radioLabel:before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 0;
+  background: url(/radiobuttonOff.svg) 0 0 no-repeat;
+}
+
+.form_radio input[type=radio]:checked+.radioLabel:before {
+  background: url(/radiobuttonOn.svg) 0 0 no-repeat;
+}
+
+@media (min-width: 2560px) {
+  .pieChartPreviewBlock {
+    max-height: 300px;
+    max-width: 150px;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2560px) {
   .pieChartPreviewBlock {
     max-height: 300px;
     max-width: 150px;

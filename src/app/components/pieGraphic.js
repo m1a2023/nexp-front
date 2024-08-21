@@ -1,6 +1,6 @@
 import { Pie } from "react-chartjs-2";
 
-export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
+export const TemplateGraphic = ({ graphicTitle, color, graphicContainer }) => {
   const Title = ({ graphicTitle }) => {
     return (
       <div className="flex w-full justify-start font-bold text-lg">
@@ -9,7 +9,7 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
     );
   };
 
-  const MainInformation = ({ mainInformation }) => {
+  const MainInformation = () => {
     return <div>By category</div>;
   };
 
@@ -99,11 +99,11 @@ export const TemplateGraphic = ({ graphicTitle, mainInformation, color }) => {
 
   return (
     <div
-      className={`flex flex-row w-3/4 px-6 py-4 ${color} text-black rounded-3xl shadow-2xl select-none`}
+      className={`flex flex-row w-3/4 px-6 py-4 ${color} ${graphicContainer} text-black rounded-3xl shadow-2xl select-none`}
     >
       <div className={"flex flex-col w-1/2 h-full"}>
         <Title graphicTitle={`${graphicTitle}`} />
-        <MainInformation mainInformation={`${mainInformation}`} />
+        <MainInformation />
         <GraphicInformation />
       </div>
       <div className={"w-1/2 h-full flex justify-center"}>
