@@ -126,7 +126,7 @@ export const TemplateAbsoluteButton = ({ styles }) => {
           <div className="flex justify-center w-full">
             <input
               name="labelText"
-              className="flex p-1 w-[75%] text-lg ring-2 ring-black focus:ring-black outline-none rounded-md"
+              className="flex p-1 w-[60%] text-lg ring-2 ring-black focus:ring-black outline-none rounded-md"
               placeholder="Enter a label"
             ></input>
           </div>
@@ -139,11 +139,16 @@ export const TemplateAbsoluteButton = ({ styles }) => {
           <div className="font-semibold">Amount</div>
 
           <div className="flex justify-center w-full">
-            <input
-              name="amountText"
-              className="flex p-1 w-[75%] text-lg ring-2 ring-black focus:ring-black outline-none rounded-md"
-              placeholder="Enter an amount"
-            ></input>
+            <div className="w-[60%] relative flex items-center">
+              <input
+                name="amountText"
+                className="flex p-1 w-full text-lg ring-2 ring-black focus:ring-black outline-none rounded-md"
+                placeholder="Enter an amount"
+              ></input>
+              <div className="absolute right-2 text-gray-400 font-[600]">
+                <span>$</span>
+              </div>
+            </div>
           </div>
         </div>
       );
