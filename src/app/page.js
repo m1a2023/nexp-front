@@ -15,10 +15,10 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-row w-full h-full box-border bg-gray-200">
+    <div className="flex flex-row w-full h-full box-border bg-gray-200 relative">
       <div
         className={`${styles.mainContainer} p-6 grow justify-start text-1xl h-full max-h-[100vh]
-        gap-x-6`}
+      gap-x-6`}
       >
         <TemplateMoneyCard
           cardTitle={"Balance"}

@@ -2,8 +2,8 @@ import { Inter } from "next/font/google";
 import "./assets/globals.css";
 import { Sidebar } from "./components/sidebar";
 import { TemplateAbsoluteButton } from "./components/absoluteButton";
-import { AllMoneyBoxTemplate } from "./components/absoluteMoneyBox";
 import styles from "./assets/page.module.css";
+import { AllMoneyBoxTemplate } from "./components/absoluteMoneyBox";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         </div>
         <div className={styles.generalPage}>{children}</div>
         <TemplateAbsoluteButton styles={styles} />
-        {/* {isAllMoneyBox ? <AllMoneyBoxTemplate styles={styles} /> : ""} */}
+        <AllMoneyBoxTemplate styles={styles} />
       </body>
     </html>
   );

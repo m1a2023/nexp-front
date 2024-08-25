@@ -197,12 +197,10 @@ export const TemplateAbsoluteButton = ({ styles }) => {
     };
     const Save = () => {
       return (
-        <div className="flex justify-end w-full items-centre font-light rounded-xl">
-          <button>
-            <div className="flex justify-center bg-ash-gray w-fit px-8 py-1 font-light rounded-xl">
-              save
-            </div>
-          </button>
+        <div className="flex justify-end w-full items-center font-light rounded-xl">
+          <div className="flex justify-center bg-ash-gray w-fit px-8 py-1 font-light rounded-xl cursor-pointer">
+            save
+          </div>
         </div>
       );
     };
