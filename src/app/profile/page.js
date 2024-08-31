@@ -5,6 +5,10 @@ import BackgroundProfilePic2 from "../../../public/profile-bg-element2.png";
 import BackgroundProfilePic3 from "../../../public/profile-bg-element3.png";
 
 export default function Profile() {
+  /**
+   * TODO     bugfix for BackgroundProfilePic3 position
+   */
+
   return (
     <div className="flex flex-row h-full w-full bg-gray-200">
       <div className="flex flex-col w-1/3 min-w-[33%] p-6 pr-3 gap-y-6 justify-start text-xl h-full">

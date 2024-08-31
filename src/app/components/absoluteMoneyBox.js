@@ -6,7 +6,7 @@ export const AllMoneyBoxTemplate = ({ styles }) => {
       <div
         className={`w-[40%] h-[60%] bg-[#fff] rounded-2xl text-black flex justify-center items-center`}
       >
-        <span>sosal?</span>
+        <span></span>
       </div>
     </div>
   );

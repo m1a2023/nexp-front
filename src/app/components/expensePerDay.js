@@ -38,7 +38,7 @@ export const ExpensePerdayBlock = () => {
   };
 
   return (
-    <div className="flex flex-col w-1/8 h-full p-4 gap-y-3 font-bold text-neutral-800 bg-gray-100 text-lg rounded-3xl shadow-2xl select-none">
+    <div className="flex flex-col w-full h-full p-4 gap-y-3 font-bold text-neutral-800 bg-gray-100 text-lg rounded-3xl shadow-2xl select-none">
       <Header />
       <div className="flex flex-col gap-y-4">
         <SpendEveryday value={319} currency={"$"} />
