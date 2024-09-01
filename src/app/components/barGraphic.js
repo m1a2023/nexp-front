@@ -1,6 +1,7 @@
 import Chart from "chart.js/auto";
 import { useEffect } from "react";
 import { Bar } from "react-chartjs-2";
+import { backgroundColors } from "./header";
 
 export const TemplateBarGraphic = ({
   graphicTitle,
@@ -73,28 +74,34 @@ export const TemplateBarGraphic = ({
    * @returns JSX.Element "Bar"
    */
   const GraphicSection = ({ labels, data }) => {
+    /**
+     * ! DEMO DATA
+     */
+    const demoLabels = [
+      "01.07 - 07.07",
+      "08.07 - 14.07",
+      "15.07 - 21.07",
+      "22.07 - 28.07",
+      "29.07 - 04.08",
+    ];
+    const demoData = [560, 1060, 409, 872, 612];
+
+    /**
+     * * Default background colors
+     * * defined in 'header.js'
+     */
+    const defaultBackgroundColors = backgroundColors;
+
     return (
       <div className={`w-[85%] h-[80%] flex justify-center items-center`}>
         <Bar
           data={{
-            labels: [
-              "01.07 - 07.07",
-              "08.07 - 14.07",
-              "15.07 - 21.07",
-              "22.07 - 28.07",
-              "29.07 - 04.08",
-            ],
+            labels: demoLabels,
             datasets: [
               {
                 label: "Amount",
-                data: [560, 1060, 409, 872, 612],
-                backgroundColor: [
-                  "#ff6384",
-                  "#36a2eb",
-                  "#ffcd56",
-                  "rgb(98, 123, 60)",
-                  "rgb(145, 145, 145)",
-                ],
+                data: demoData,
+                backgroundColor: defaultBackgroundColors,
                 hoverOffset: 4,
               },
             ],
@@ -112,12 +119,12 @@ export const TemplateBarGraphic = ({
                 display: true,
                 title: {
                   display: true,
-                  text: "weeks",
+                  text: "Weeks",
                   color: "#000",
                   font: {
                     size: 15,
                     weight: "regular",
-                    lineHeight: 1,
+                    lineHeight: 3,
                   },
                   padding: { top: 20, left: 0, right: 0, bottom: 0 },
                 },
