@@ -62,7 +62,7 @@ export default function Home() {
           <TemplateBarGraphic
             graphicTitle={"Expenses"}
             color={"bg-gray-100"}
-            graphicContainer={styles.graphicContainer}
+            classGraphicContainer={styles.graphicContainer}
           />
         )}
 

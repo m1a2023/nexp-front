@@ -5,7 +5,7 @@ import { Bar } from "react-chartjs-2";
 export const TemplateBarGraphic = ({
   graphicTitle,
   color,
-  graphicContainer,
+  classGraphicContainer,
 }) => {
   const Title = ({ graphicTitle }) => {
     return (
@@ -19,6 +19,10 @@ export const TemplateBarGraphic = ({
     return <div>By weeks</div>;
   };
 
+  /**
+   * ! Unused const
+   * @returns JSX.Element
+   */
   const GraphicInformation = () => {
     return (
       <div className="h-[100%] flex flex-col justify-center">
@@ -62,7 +66,13 @@ export const TemplateBarGraphic = ({
     );
   };
 
-  const GraphicSection = () => {
+  /**
+   * TODO   below
+   * @param  labels String[]
+   * @param  data   Integer[]
+   * @returns JSX.Element "Bar"
+   */
+  const GraphicSection = ({ labels, data }) => {
     return (
       <div className={`w-[85%] h-[80%] flex justify-center items-center`}>
         <Bar
@@ -76,7 +86,7 @@ export const TemplateBarGraphic = ({
             ],
             datasets: [
               {
-                label: "Dollar",
+                label: "Amount",
                 data: [560, 1060, 409, 872, 612],
                 backgroundColor: [
                   "#ff6384",
@@ -102,13 +112,12 @@ export const TemplateBarGraphic = ({
                 display: true,
                 title: {
                   display: true,
-                  text: "Weeks",
+                  text: "weeks",
                   color: "#000",
                   font: {
-                    //   family: "",
-                    size: 22,
-                    weight: "bold",
-                    lineHeight: 1.2,
+                    size: 15,
+                    weight: "regular",
+                    lineHeight: 1,
                   },
                   padding: { top: 20, left: 0, right: 0, bottom: 0 },
                 },
@@ -120,34 +129,19 @@ export const TemplateBarGraphic = ({
                 display: true,
                 title: {
                   display: true,
-                  text: "Dollar",
+                  text: "Amount",
                   color: "#000",
                   font: {
-                    //   family: "",
-                    size: 22,
-                    weight: "bold",
-                    lineHeight: 1.2,
+                    size: 15,
+                    weight: "regular",
+                    lineHeight: 0,
                   },
                   padding: { top: 20, left: 0, right: 0, bottom: 0 },
                 },
                 grid: {
-                  display: false,
+                  display: true,
                 },
               },
-              //   xAxes: [
-              //     {
-              //       gridLines: {
-              //         color: "rgba(0, 0, 0, 0)",
-              //       },
-              //     },
-              //   ],
-              //   yAxes: [
-              //     {
-              //       gridLines: {
-              //         color: "rgba(0, 0, 0, 0)",
-              //       },
-              //     },
-              //   ],
             },
           }}
         />
@@ -157,7 +151,7 @@ export const TemplateBarGraphic = ({
 
   return (
     <div
-      className={`flex w-3/4 px-6 py-4 ${color} text-black rounded-3xl shadow-2xl select-none ${graphicContainer}`}
+      className={`flex w-3/4 px-6 py-4 ${color} text-black rounded-3xl shadow-2xl select-none ${classGraphicContainer}`}
     >
       <div className={"flex flex-col w-full h-full"}>
         <Title graphicTitle={`${graphicTitle}`} />

@@ -7,7 +7,7 @@ import Image from "next/image";
 export const AllMoneyBoxTemplate = ({ styles }) => {
   const isAllMoneyBox = MoneyBoxStore((state) => state.isMoneyBox);
   const changeMoneyBoxState = MoneyBoxStore(
-    (state) => state.changeMoneyBoxState
+    (state) => state.changeMoneyBoxState,
   );
 
   return (
@@ -27,7 +27,6 @@ export const AllMoneyBoxTemplate = ({ styles }) => {
                   }}
                 />
               </div>
-              {/*  max-h-[250px] */}
               <div
                 className={`flex flex-col snap-start w-[60%] h-[80%] p-4 justify-start rounded-3xl shadow-2xl select-none capitalize`}
                 style={{ backgroundColor: "#6320ee", color: "#fff" }}
