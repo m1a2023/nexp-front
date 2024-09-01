@@ -9,10 +9,10 @@ import { ExpensePerdayBlock } from "./components/expensePerDay";
 import { SquareExpenseChartBlock } from "./components/squareExpenseChart";
 
 export default function Home() {
-  const [isChartPressed, ChangeChart] = useState(true);
+  const [chartPressedState, changeChartState] = useState(true);
 
   function homePageChangeChart() {
-    ChangeChart((current) => !current);
+    changeChartState((current) => !current);
   }
 
   return (
@@ -53,12 +53,12 @@ export default function Home() {
           width={"w-[100%]"}
         />
 
-        {isChartPressed ? (
+        {chartPressedState ? (
           <TemplateGraphic
             graphicTitle={"Expenses"}
             color={"bg-gray-100"}
             graphicContainer={styles.graphicContainer}
-          ></TemplateGraphic>
+          />
         ) : (
           <TemplateBarGraphic
             graphicTitle={"Expenses"}
@@ -73,7 +73,7 @@ export default function Home() {
             onClick={homePageChangeChart}
             className="flex flex-col w-full h-full pl-4 pr-3 pb-2 pt-3 grow-0 font-bold text-neutral-800  bg-gray-100 text-lg rounded-3xl shadow-2xl select-none"
           >
-            <SquareExpenseChartBlock isChartPressed={isChartPressed} />
+            <SquareExpenseChartBlock chartPressedState={chartPressedState} />
           </div>
         </div>
       </div>
