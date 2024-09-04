@@ -2,6 +2,105 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
+export const absoluteButton = () => {
+  const Quit = ({ exitFunction }) => {
+    return (
+      <button
+        onClick={() => {
+          exitFunction();
+        }}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 170 170"
+          fill="none"
+        >
+          <circle cx="85" cy="85" r="85" fill="#0C0101" />
+          <rect
+            x="50.1396"
+            y="110.244"
+            width="85"
+            height="12.75"
+            rx="6.375"
+            transform="rotate(-45 50.1396 110.244)"
+            fill="white"
+          />
+          <rect
+            x="50.1396"
+            y="110.244"
+            width="85"
+            height="12.75"
+            rx="6.375"
+            transform="rotate(-45 50.1396 110.244)"
+            fill="white"
+          />
+          <rect
+            x="110.244"
+            y="119.86"
+            width="85"
+            height="12.75"
+            rx="6.375"
+            transform="rotate(-135 110.244 119.86)"
+            fill="white"
+          />
+          <rect
+            x="110.244"
+            y="119.86"
+            width="85"
+            height="12.75"
+            rx="6.375"
+            transform="rotate(-135 110.244 119.86)"
+            fill="white"
+          />
+        </svg>
+      </button>
+    );
+  };
+
+  const Head = ({ func }) => {
+    return (
+      <div className="flex flex-row w-full">
+        <div className="flex justify-center font-semibold w-full">Add</div>
+        <Quit exitFunction={func} />
+      </div>
+    );
+  };
+
+  const Amount = () => {
+    return (
+      <div className="flex flex-col gap-y-2">
+        <div className="font-semibold">Amount</div>
+
+        <div className="flex justify-center w-full">
+          <div className="w-[60%] relative flex items-center">
+            <input
+              name="amountText"
+              className="flex p-1 w-full text-lg ring-2 ring-black focus:ring-black outline-none rounded-md"
+              placeholder="Enter an amount"
+            ></input>
+            <div className="absolute right-2 text-gray-400 font-[600]">
+              <span>$</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const Save = () => {
+    return (
+      <div className="flex justify-end w-full items-center font-light rounded-xl">
+        <div className="flex justify-center bg-ash-gray w-fit px-8 py-1 font-light rounded-xl cursor-pointer">
+          save
+        </div>
+      </div>
+    );
+  };
+
+  return { Quit, Head, Amount, Save };
+};
 export const TemplateAbsoluteButton = ({ styles }) => {
   const [isAbsoluteBlock, setIsAbsoluteBlock] = useState(false);
 
@@ -10,69 +109,8 @@ export const TemplateAbsoluteButton = ({ styles }) => {
   }
 
   const ExpenseIncomeBlock = ({ classExpenseIncome }) => {
-    const Quit = () => {
-      return (
-        <button
-          onClick={() => {
-            homePageAbsoluteBlock();
-          }}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            viewBox="0 0 170 170"
-            fill="none"
-          >
-            <circle cx="85" cy="85" r="85" fill="#0C0101" />
-            <rect
-              x="50.1396"
-              y="110.244"
-              width="85"
-              height="12.75"
-              rx="6.375"
-              transform="rotate(-45 50.1396 110.244)"
-              fill="white"
-            />
-            <rect
-              x="50.1396"
-              y="110.244"
-              width="85"
-              height="12.75"
-              rx="6.375"
-              transform="rotate(-45 50.1396 110.244)"
-              fill="white"
-            />
-            <rect
-              x="110.244"
-              y="119.86"
-              width="85"
-              height="12.75"
-              rx="6.375"
-              transform="rotate(-135 110.244 119.86)"
-              fill="white"
-            />
-            <rect
-              x="110.244"
-              y="119.86"
-              width="85"
-              height="12.75"
-              rx="6.375"
-              transform="rotate(-135 110.244 119.86)"
-              fill="white"
-            />
-          </svg>
-        </button>
-      );
-    };
-    const Head = () => {
-      return (
-        <div className="flex flex-row w-full">
-          <div className="flex justify-center font-semibold w-full">Add</div>
-          <Quit />
-        </div>
-      );
-    };
+    const { Quit, Head, Amount, Save } = absoluteButton();
+
     const Type = () => {
       return (
         <div className="flex flex-col gap-y-2">
@@ -133,26 +171,7 @@ export const TemplateAbsoluteButton = ({ styles }) => {
         </div>
       );
     };
-    const Amount = () => {
-      return (
-        <div className="flex flex-col gap-y-2">
-          <div className="font-semibold">Amount</div>
 
-          <div className="flex justify-center w-full">
-            <div className="w-[60%] relative flex items-center">
-              <input
-                name="amountText"
-                className="flex p-1 w-full text-lg ring-2 ring-black focus:ring-black outline-none rounded-md"
-                placeholder="Enter an amount"
-              ></input>
-              <div className="absolute right-2 text-gray-400 font-[600]">
-                <span>$</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      );
-    };
     const Tags = () => {
       const [activeTagIndex, setActiveTagIndex] = useState(null);
 
@@ -195,22 +214,13 @@ export const TemplateAbsoluteButton = ({ styles }) => {
         </div>
       );
     };
-    const Save = () => {
-      return (
-        <div className="flex justify-end w-full items-center font-light rounded-xl">
-          <div className="flex justify-center bg-ash-gray w-fit px-8 py-1 font-light rounded-xl cursor-pointer">
-            save
-          </div>
-        </div>
-      );
-    };
 
     return (
       <div
         className={`flex flex-col backdrop-blur-lg backdrop-brightness-75 w-full h-full ${classExpenseIncome} text-black text-2xl justify-center items-center select-none`}
       >
         <div className="flex flex-col w-[35%] h-fit p-4 shadow-xl bg-white rounded-3xl items-center">
-          <Head />
+          <Head func={homePageAbsoluteBlock} />
 
           <div className="flex flex-col w-full h-full gap-4 p-[5%]">
             <Type />
