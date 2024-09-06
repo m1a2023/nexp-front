@@ -7,7 +7,7 @@ import Image from "next/image";
 export const AllMoneyBoxTemplate = ({ styles }) => {
   const isAllMoneyBox = MoneyBoxStore((state) => state.isMoneyBox);
   const changeMoneyBoxState = MoneyBoxStore(
-    (state) => state.changeMoneyBoxState,
+    (state) => state.changeMoneyBoxState
   );
 
   return (
